@@ -22,6 +22,7 @@ import { DichvuAddComponent } from './dichvu-add/dichvu-add.component';
 import { DichvuEditComponent } from './dichvu-edit/dichvu-edit.component';
 import { ThongKeTienLuongComponent } from './thong-ke-tien-luong/thong-ke-tien-luong.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { UsersComponent } from './users/users.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     DichvuEditComponent,
     ThongKeTienLuongComponent,
     DashboardComponent,
+    UsersComponent,
   ],
   imports: [
     BrowserModule,

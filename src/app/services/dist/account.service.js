@@ -9,9 +9,9 @@ exports.__esModule = true;
 exports.AccountService = void 0;
 var core_1 = require("@angular/core");
 var AccountService = /** @class */ (function () {
-    function AccountService(api //inject API class
-    ) {
+    function AccountService(api, router) {
         this.api = api;
+        this.router = router;
     }
     AccountService.prototype.login = function (username, password) {
         return this.api.post('/api/Account/login', {
@@ -42,6 +42,7 @@ var AccountService = /** @class */ (function () {
         localStorage.setItem("isLogged", "0");
         localStorage.setItem('UserName', "");
         location.reload(true);
+        this.router.navigateByUrl('/');
     };
     AccountService = __decorate([
         core_1.Injectable({

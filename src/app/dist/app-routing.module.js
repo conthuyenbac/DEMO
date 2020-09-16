@@ -12,14 +12,8 @@ var router_1 = require("@angular/router");
 var login_component_1 = require("./login/login.component");
 var admin_component_1 = require("./admin/admin.component");
 var auth_guard_1 = require("./guards/auth.guard");
-var category_component_1 = require("./category/category.component");
-var category_add_component_1 = require("./category-add/category-add.component");
-var category_edit_component_1 = require("./category-edit/category-edit.component");
-var dichvu_component_1 = require("./dichvu/dichvu.component");
-var dichvu_add_component_1 = require("./dichvu-add/dichvu-add.component");
-var dichvu_edit_component_1 = require("./dichvu-edit/dichvu-edit.component");
-var thong_ke_tien_luong_component_1 = require("./thong-ke-tien-luong/thong-ke-tien-luong.component");
 var dashboard_component_1 = require("./dashboard/dashboard.component");
+var users_component_1 = require("./users/users.component");
 var routes = [
     {
         path: '',
@@ -36,52 +30,14 @@ var routes = [
         canActivateChild: [auth_guard_1.AuthGuard]
     },
     {
-        path: 'DanhMucNhanVien',
-        component: category_component_1.CategoryComponent,
-        canActivate: [auth_guard_1.AuthGuard],
-        canActivateChild: [auth_guard_1.AuthGuard]
-    },
-    {
-        path: 'ThemMoiNhanVien',
-        component: category_add_component_1.CategoryAddComponent,
-        canActivate: [auth_guard_1.AuthGuard],
-        canActivateChild: [auth_guard_1.AuthGuard]
-    },
-    {
-        path: 'ChinhSuaNhanVien/:id',
-        component: category_edit_component_1.CategoryEditComponent,
-        canActivate: [auth_guard_1.AuthGuard],
-        canActivateChild: [auth_guard_1.AuthGuard]
-    },
-    {
-        path: 'DanhMucDichVu',
-        component: dichvu_component_1.DichvuComponent,
-        canActivate: [auth_guard_1.AuthGuard],
-        canActivateChild: [auth_guard_1.AuthGuard]
-    },
-    {
-        path: 'ThemMoiDichVu',
-        component: dichvu_add_component_1.DichvuAddComponent,
-        canActivate: [auth_guard_1.AuthGuard],
-        canActivateChild: [auth_guard_1.AuthGuard]
-    },
-    {
-        path: 'ChinhSuaDichVu/:id',
-        component: dichvu_edit_component_1.DichvuEditComponent,
-        canActivate: [auth_guard_1.AuthGuard],
-        canActivateChild: [auth_guard_1.AuthGuard]
-    },
-    {
-        path: 'ThongKeTienLuong',
-        component: thong_ke_tien_luong_component_1.ThongKeTienLuongComponent,
-        canActivate: [auth_guard_1.AuthGuard],
-        canActivateChild: [auth_guard_1.AuthGuard]
-    },
-    {
         path: 'dashboard',
         component: dashboard_component_1.DashboardComponent,
         canActivate: [auth_guard_1.AuthGuard],
         canActivateChild: [auth_guard_1.AuthGuard]
+    },
+    {
+        path: 'user',
+        component: users_component_1.UsersComponent
     }
 ];
 var AppRoutingModule = /** @class */ (function () {

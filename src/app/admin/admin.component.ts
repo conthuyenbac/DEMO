@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AccountService } from '../services/account.service';
 import { Router } from '@angular/router';
-
 @Component({
   selector: 'app-admin',
   templateUrl: './admin.component.html',
@@ -14,5 +13,9 @@ export class AdminComponent implements OnInit {
 
   trangChu() {
     this.router.navigateByUrl('/admin');
+  }
+
+  LogOut(){
+    this.accountService.clearLocalStorage();
   }
 }

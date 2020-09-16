@@ -1,13 +1,14 @@
 import { Injectable } from '@angular/core';
 import { API } from './api';
-
+import { Router } from '@angular/router';
 @Injectable({
   providedIn: 'root'
 })
 export class AccountService {
 
   constructor(
-    private api: API //inject API class
+    private api: API,
+    private router: Router
   ) { }
 
   login(username: string, password: string) {
@@ -46,5 +47,6 @@ export class AccountService {
     localStorage.setItem("isLogged","0");
     localStorage.setItem('UserName', "");
     location.reload(true);
+    this.router.navigateByUrl('/');
   }
 }

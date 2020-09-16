@@ -1,0 +1,118 @@
+<div class="container">
+  <form [formGroup]="model.formGroup" (ngSubmit)="submitData()">
+    <h2>Đăng ký tài khoản</h2>
+    <div class="form-group">
+      <label>Tên</label>
+      <input
+        type="text"
+        [(ngModel)]="model.firstName"
+        formControlName="firstName"
+        class="form-control"
+      />
+      <p
+        class="text-muted"
+        [hidden]="!model.formGroup.controls['firstName'].hasError('required')"
+        style="color: red !important"
+      >
+        Vui lòng nhập tên
+      </p>
+    </div>
+     <div class="form-group">
+      <label>Họ</label>
+      <input
+        type="text"
+        [(ngModel)]="model.lastName"
+        formControlName="lastName"
+        class="form-control"
+      />
+      <p
+        class="text-muted"
+        [hidden]="!model.formGroup.controls['lastName'].hasError('required')"
+        style="color: red !important"
+      >
+        Vui lòng nhập họ
+      </p>
+    </div>
+    <div class="form-group">
+      <label>Tài khoản</label>
+      <input
+        type="text"
+        [(ngModel)]="model.username"
+        formControlName="username"
+        class="form-control"
+      />
+      <p
+        class="text-muted"
+        [hidden]="!model.formGroup.controls['username'].hasError('required')"
+        style="color: red !important"
+      >
+        Vui lòng nhập tài khoản
+      </p>
+    </div>
+    <div class="form-group">
+      <label>Mật khẩu</label>
+      <input
+        type="password"
+        [(ngModel)]="model.password"
+        formControlName="password"
+        class="form-control"
+      />
+      <p
+        class="text-muted"
+        [hidden]="!model.formGroup.controls['password'].hasError('required')"
+        style="color: red !important"
+      >
+        Vui lòng nhập mật khẩu
+      </p>
+    </div>
+    <div class="form-group">
+      <label>Nhập lại mật khẩu</label>
+      <input
+        type="password"
+        [(ngModel)]="model.confirmPassword"
+        formControlName="confirmPassword"
+        class="form-control"
+      />
+      <p
+        class="text-muted"
+        [hidden]="!model.formGroup.controls['confirmPassword'].hasError('required')"
+        style="color: red !important"
+      >
+        Vui lòng nhập mật khẩu
+      </p>
+    </div>
+
+    <div class="form-group">
+      <label>Email</label>
+      <input
+        type="email"
+        [(ngModel)]="model.email"
+        formControlName="email"
+        class="form-control"
+      />
+      <p
+        class="text-muted"
+        [hidden]="!model.formGroup.controls['email'].hasError('required')"
+        style="color: red !important"
+      >
+        Vui lòng nhập email
+      </p>
+    </div>
+    
+    <button
+      type="submit"
+      class="btn btn-primary"
+      [disabled]="!model.formGroup.valid"
+    >
+      Lưu
+    </button>
+    <button
+      [routerLink]="['']"
+      routerLinkActive="router-link-active"
+      class="btn btn-secondary"
+      style="margin-left: 5px"
+    >
+      Trở lại
+    </button>
+  </form>
+</div>
