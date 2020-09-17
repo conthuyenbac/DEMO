@@ -1,72 +1,2279 @@
-<div class="container">
-    <div class="row form-group">
-        <div class="col-sm-12">
-            <div class="col-sm-8"></div>
-            <div class="col-sm-4">
-                <div class="col-sm-12" *ngIf="!login">
-                    <h3>Xin chào {{username}}</h3>
-                </div>
-                <div class="col-sm-12">                  
-                <button class="btn btn-sm btn-primary"
-                        style="margin-right: 5px"
-                        [routerLink]="['/user']"
-                        *ngIf="login">
+<body class="theme-demo-page bg-grey giao-dien/demo/veles">
+  <div class="wrapper">
+    <div class="admin-header bg-white">
+      <div class="container">
+        <div class="row">
+          <div class="col-6 col-sm-3 text-left">
+          </div>
+          <div class="col-sm-6 d-none d-sm-block text-center view-demo-menu">
+          </div>
+          <div class="col-6 col-sm-3 text-right admin-menu">
+            <div class="row">
+              <span class="pull-right" *ngIf="!login">Xin chào {{ username }}</span>
+            </div>
+            <div class="row">
+              <button class="btn-sm btn-primary right" style="margin-right: 5px" [routerLink]="['/user']" *ngIf="login">
                 Regiter
-                </button>
+              </button>
 
-                <button class="btn btn-sm btn-primary"
-                (click)="Login()"
-                style="margin-right:5px"
-                *ngIf="login">
+              <button class="btn btn-sm btn-primary" (click)="Login()" style="margin-right:5px" *ngIf="login">
                 Login
-                </button>
+              </button>
 
-                <button class="btn btn-sm btn-primary"
-                (click)="LogOut()"
-                 style="margin-right:5px"
-                *ngIf="!login">
+              <button class="btn btn-sm btn-primary" (click)="LogOut()" style="margin-right:5px" *ngIf="!login">
                 LogOut
-                </button>
+              </button>
 
-                <button class="btn btn-sm btn-primary"
-                (click)="returnAdmin()"
-                *ngIf="username=='namnguyenthanh'">
+              <button class="btn btn-sm btn-primary" (click)="returnAdmin()" *ngIf="username=='namnguyenthanh'">
                 Go to page Admin
-                </button>
-                </div>
+              </button>
             </div>
+          </div>
         </div>
+      </div>
     </div>
-    <div class="row form-group">
-        <div class="col-sm-12">
-            <div class="col-sm-3">
-                <img src="assets/Anh/nhung-mau-ghe-sofa-468x468.jpg">
-                <div class="col-sm-12">
-                    <label class=" col-sm-12"> Bàn cafe </label>
+    &nbsp;
+    <div class="container-fluid">
+      <div class="row">
+        <div id="content" class="col-sm-12 col-xs-12 col-md-12">
+          <section class="awe-section-2">
+            <div class="section_banner_home">
+              <div class="container">
+                <div class="row">
+                  <div class="col-md-3 col-sm-3 col-xs-12 col-xs-12 box box1">
+                    <div class="box-inner"> <a href=""> <img
+                          src="https://veles.exdomain.net/image/cache/catalog/one_banner_1_image-270x340.jpg"
+                          alt="Hàng mới về"> </a>
+                      <div class="text">
+                        <p>Hàng mới về</p>
+                        <p><span style="font-size: 18pt;">Mẫu bàn ăn 2018</span></p>
+                        <p>Giảm giá đến 20%</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6 col-sm-6 col-xs-12 box box2">
+                    <div class="box-inner"> <a href=""> <img
+                          src="https://veles.exdomain.net/image/cache/catalog/one_banner_2_image-565x340.jpg"
+                          alt="Ý tưởng thiết kế nội thất"> </a>
+                      <div class="text">
+                        <p>Ý tưởng thiết kế nội thất</p>
+                        <p><span style="font-size: 18pt;">Ghế gỗ - Mẫu bàn mới</span></p>
+                        <p>Chỉ từ 1tr VNĐ - Giảm giá 60%</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-3 col-sm-3 col-xs-12 box box3">
+                    <div class="box-inner"> <a href=""> <img
+                          src="https://veles.exdomain.net/image/cache/catalog/one_banner_3_image-270x340.jpg"
+                          alt="Thương hiệu mới"> </a>
+                      <div class="text">
+                        <p>Thương hiệu mới</p>
+                        <p><span style="font-size: 18pt;">Ghế Conpenhagen</span></p>
+                        <p>Giảm giá đến 40%</p>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <div class="col-sm-12">
-                    <label>10.000.000 đ</label>
-                </div>
+              </div>
             </div>
-            <div class="col-sm-3">
-                <img src="assets/Anh/ban-cafe-468x468.jpg">
-                <div class="col-sm-12">
-                    <label class=" col-sm-12"> Bàn cafe </label>
+          </section>
+          <section class="awe-section-3">
+            <div class="section_product">
+              <div class="container">
+                <div class="row">
+                  <div class="col-md-3 hidden-sm hidden-xs">
+                    <div class="mainmenu">
+                      <span class="edit-span">
+                        <i class="fa fa-dashcube"></i>Danh mục sản phẩm
+                      </span>
+                      <div class="nav-cate">
+                        <ul id="menu2017">
+                          <li class="menu-item-count">
+                            <h3>Phòng bếp</h3>
+                          </li>
+                          <li class="menu-item-count">
+                            <h3>Bàn ăn</h3>
+                          </li>
+                          <li class="menu-item-count">
+                            <h3>Phòng khách</h3>
+                          </li>
+                          <li class="menu-item-count">
+                            <h3>Ghế sofa</h3>
+                          </li>
+                          <li class="menu-item-count">
+                            <h3>Phòng ngủ</h3>
+                          </li>
+                          <li class="menu-item-count">
+                            <h3>Giường ngủ</h3>
+                          </li>
+                          <li class="menu-item-count">
+                            <h3>Đồ trang trí</h3>
+                          </li>
+                          <li class="menu-item-count">
+                            <h3>Tranh nghệ thuật</h3>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-9">
+                    <div class="row">
+                      <div class="col-md-12 e-tabs not-dqtab ajax-tab-1" data-section="ajax-tab-1">
+                        <div class="content">
+                          <div>
+                            <div class="section-head">
+                              <span class="group-icon"><i class="fa fa-dashcube"></i></span>
+                              <h2>Sản phẩm nổi bật</h2>
+                              <ul class="tabs tabs-title tab-desktop ajax clearfix">
+                                <li class="tab-link has-content current" data-tabs=".wrapper-tab" data-tab=".tab-0">
+                                  <span>Ghế sofa</span>
+                                </li>
+                                <li class="tab-link has-content " data-tabs=".wrapper-tab" data-tab=".tab-1">
+                                  <span>
+                                    Giường
+                                    ngủ
+                                  </span>
+                                </li>
+                                <li class="tab-link has-content " data-tabs=".wrapper-tab" data-tab=".tab-2">
+                                  <span>
+                                    Tủ
+                                    quần áo
+                                  </span>
+                                </li>
+                                <li class="tab-link has-content " data-tabs=".wrapper-tab" data-tab=".tab-3">
+                                  <span>
+                                    Gối
+                                    trang trí
+                                  </span>
+                                </li>
+                                <li class="tab-link has-content " data-tabs=".wrapper-tab" data-tab=".tab-4">
+                                  <span>Thảm</span>
+                                </li>
+                                <li class="tab-link has-content " data-tabs=".wrapper-tab" data-tab=".tab-5">
+                                  <span>
+                                    Tranh
+                                    nghệ thuật
+                                  </span>
+                                </li>
+                              </ul>
+                            </div>
+                            <div class="wrapper-tab">
+                              <div class="tab-0 tab-content current">
+                                <div
+                                  class="section-tour-owl2 products products-view-grid owl-carousel owl-loaded owl-drag"
+                                  data-lg-items="4" data-md-items="4" data-sm-items="3" data-xs-items="2"
+                                  data-xss-items="2" data-margin="10" data-nav="false" data-dot="false">
+                                  <div class="owl-stage-outer owl-height" style="height: 294px;">
+                                    <div class="owl-stage"
+                                      style="transform: translate3d(-880px, 0px, 0px); transition: all 0s ease 0s; width: 2860px;">
+                                      <div class="owl-item active" style="width: 210px; margin-right: 10px;">
+                                        <div class="item">
+                                          <div class="ant-product-item">
+                                            <div class="product_row">
+                                              <div class="item">
+                                                <div class="item-inner">
+                                                  <div class="image-container">
+                                                    <a href=""
+                                                      class="product-item-photo">
+                                                      <img class="product-image-photo img-responsive center-block"
+                                                        src="https://veles.exdomain.net/image/cache/catalog/products/nhung-mau-ghe-sofa-nen-co-trong-nha-45-142822-285x215.jpg"
+                                                        alt="Sofa - Màu be">
+                                                    </a>
+                                                  </div>
+                                                  <div class="box-info">
+                                                    <h3 class="product-item-name">
+                                                      <a title="Sofa - Màu be" href="" class="product-item-link">Sofa -
+                                                        Màu be</a>
+                                                    </h3>
+                                                    <div class="item-price">
+                                                      <div class="price-box price-final_price">
+                                                        <span class="special-price">
+                                                          <span class="price-container">
+                                                            <span class="price-wrapper">
+                                                              <span class="price">2,350,000đ</span>
+                                                            </span>
+                                                          </span>
+                                                        </span>
+                                                      </div>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="owl-item active" style="width: 210px; margin-right: 10px;">
+                                        <div class="item">
+                                          <div class="ant-product-item">
+                                            <div class="product_row">
+                                              <div class="item">
+                                                <div class="item-inner">
+                                                  <div class="image-container">
+                                                    <a href="" class="product-item-photo">
+                                                      <img class="product-image-photo img-responsive center-block"
+                                                        src="https://veles.exdomain.net/image/cache/catalog/products/Ghe-sofa-bang-can-ho-chung-cu-SF03B-500x500-285x215.jpg"
+                                                        alt="Sofa vải lanh Water-Look">
+                                                    </a>
+                                                  </div>
+                                                  <div class="box-info">
+                                                    <h3 class="product-item-name">
+                                                      <a title="Sofa vải lanh Water-Look" href=""
+                                                        class="product-item-link">Sofa vải lanh Water-Look</a>
+                                                    </h3>
+                                                    <div class="item-price">
+                                                      <div class="price-box price-final_price">
+                                                        <span class="special-price">
+                                                          <span class="price-container">
+                                                            <span class="price-wrapper">
+                                                              <span class="price">20,130,000đ</span>
+                                                            </span>
+                                                          </span>
+                                                        </span>
+                                                      </div>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="owl-item active" style="width: 210px; margin-right: 10px;">
+                                        <div class="item">
+                                          <div class="ant-product-item">
+                                            <div class="product_row">
+                                              <div class="item">
+                                                <div class="item-inner">
+                                                  <div class="image-container">
+                                                    <a href="" class="product-item-photo">
+                                                      <img class="product-image-photo img-responsive center-block"
+                                                        src="https://veles.exdomain.net/image/cache/catalog/products/Ghe-sofa-bang-SF09B-500x500-285x215.jpg"
+                                                        alt="Sofa vải Ailsa">
+                                                    </a>
+                                                  </div>
+                                                  <div class="box-info">
+                                                    <h3 class="product-item-name">
+                                                      <a title="Sofa vải Ailsa" href="" class="product-item-link">Sofa
+                                                        vải Ailsa</a>
+                                                    </h3>
+                                                    <div class="item-price">
+                                                      <div class="price-box price-final_price">
+                                                        <span class="special-price">
+                                                          <span class="price-container">
+                                                            <span class="price-wrapper">
+                                                              <span class="price">25,678,000đ</span>
+                                                            </span>
+                                                          </span>
+                                                        </span>
+                                                      </div>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="owl-item active" style="width: 210px; margin-right: 10px;">
+                                        <div class="item">
+                                          <div class="ant-product-item">
+                                            <div class="product_row">
+                                              <div class="item">
+                                                <div class="item-inner">
+                                                  <div class="image-container">
+                                                    <a href="" class="product-item-photo">
+                                                      <img class="product-image-photo img-responsive center-block"
+                                                        src="https://veles.exdomain.net/image/cache/catalog/products/hnh5hpwq-1538272611894235255809-285x215.jpg"
+                                                        alt="Tuva Sofa">
+                                                    </a>
+                                                  </div>
+                                                  <div class="box-info">
+                                                    <h3 class="product-item-name">
+                                                      <a title="Tuva Sofa" href="" class="product-item-link">Tuva
+                                                        Sofa</a>
+                                                    </h3>
+                                                    <div class="item-price">
+                                                      <div class="price-box price-final_price">
+                                                        <span class="special-price">
+                                                          <span class="price-container">
+                                                            <span class="price-wrapper">
+                                                              <span class="price">18,500,000đ</span>
+                                                            </span>
+                                                          </span>
+                                                        </span>
+                                                      </div>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="owl-item" style="width: 210px; margin-right: 10px;">
+                                        <div class="item">
+                                          <div class="ant-product-item">
+                                            <div class="product_row">
+                                              <div class="item">
+                                                <div class="item-inner">
+                                                  <div class="image-container">
+                                                    <a href=""
+                                                      class="product-item-photo">
+                                                      <img class="product-image-photo img-responsive center-block"
+                                                        src="https://veles.exdomain.net/image/cache/catalog/products/oTQqyg_simg_de2fe0_500x500_maxb-285x215.jpg"
+                                                        alt="Annesley Sofa - Xám">
+                                                    </a>
+                                                  </div>
+                                                  <div class="box-info">
+                                                    <h3 class="product-item-name">
+                                                      <a title="Annesley Sofa - Xám"
+                                                        href=""
+                                                        class="product-item-link">Annesley Sofa - Xám</a>
+                                                    </h3>
+                                                    <div class="item-price">
+                                                      <div class="price-box price-final_price">
+                                                        <span class="special-price">
+                                                          <span class="price-container">
+                                                            <span class="price-wrapper">
+                                                              <span class="price">17,890,000đ</span>
+                                                            </span>
+                                                          </span>
+                                                        </span>
+                                                      </div>
+                                                    </div>                                                   
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="owl-item cloned" style="width: 210px; margin-right: 10px;">
+                                        <div class="item">
+                                          <div class="ant-product-item">
+                                            <div class="product_row">
+                                              <div class="item">
+                                                <div class="item-inner">
+                                                  <div class="image-container">
+                                                    <a href=""
+                                                      class="product-item-photo">
+                                                      <img class="product-image-photo img-responsive center-block"
+                                                        src="https://veles.exdomain.net/image/cache/catalog/products/nhung-mau-ghe-sofa-nen-co-trong-nha-45-142822-285x215.jpg"
+                                                        alt="Sofa - Màu be">
+                                                    </a>
+                                                  </div>
+                                                  <div class="box-info">
+                                                    <h3 class="product-item-name">
+                                                      <a title="Sofa - Màu be"
+                                                        href=""
+                                                        class="product-item-link">Sofa - Màu be</a>
+                                                    </h3>
+                                                    <div class="item-price">
+                                                      <div class="price-box price-final_price">
+                                                        <span class="special-price">
+                                                          <span class="price-container">
+                                                            <span class="price-wrapper">
+                                                              <span class="price">2,350,000đ</span>
+                                                            </span>
+                                                          </span>
+                                                        </span>
+                                                      </div>
+                                                    </div>                                                   
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="owl-item cloned" style="width: 210px; margin-right: 10px;">
+                                        <div class="item">
+                                          <div class="ant-product-item">
+                                            <div class="product_row">
+                                              <div class="item">
+                                                <div class="item-inner">
+                                                  <div class="image-container">
+                                                    <a href=""
+                                                      class="product-item-photo">
+                                                      <img class="product-image-photo img-responsive center-block"
+                                                        src="https://veles.exdomain.net/image/cache/catalog/products/Ghe-sofa-bang-can-ho-chung-cu-SF03B-500x500-285x215.jpg"
+                                                        alt="Sofa vải lanh Water-Look">
+                                                    </a>
+                                                  </div>
+                                                  <div class="box-info">
+                                                    <h3 class="product-item-name">
+                                                      <a title="Sofa vải lanh Water-Look"
+                                                        href=""
+                                                        class="product-item-link">Sofa vải lanh Water-Look</a>
+                                                    </h3>
+                                                    <div class="product-reviews-summary">
+                                                      <div class="rating-summary">
+                                                        <div class="zozo-product-reviews-badge" data-id="1017908240">
+                                                        </div>
+                                                      </div>
+                                                    </div>
+                                                    <div class="item-price">
+                                                      <div class="price-box price-final_price">
+                                                        <span class="special-price">
+                                                          <span class="price-container">
+                                                            <span class="price-wrapper">
+                                                              <span class="price">20,130,000đ</span>
+                                                            </span>
+                                                          </span>
+                                                        </span>
+                                                      </div>
+                                                    </div>                                                   
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="owl-item cloned" style="width: 210px; margin-right: 10px;">
+                                        <div class="item">
+                                          <div class="ant-product-item">
+                                            <div class="product_row">
+                                              <div class="item">
+                                                <div class="item-inner">
+                                                  <div class="image-container">
+                                                    <a href=""
+                                                      class="product-item-photo">
+                                                      <img class="product-image-photo img-responsive center-block"
+                                                        src="https://veles.exdomain.net/image/cache/catalog/products/Ghe-sofa-bang-SF09B-500x500-285x215.jpg"
+                                                        alt="Sofa vải Ailsa">
+                                                    </a>
+                                                  </div>
+                                                  <div class="box-info">
+                                                    <h3 class="product-item-name">
+                                                      <a title="Sofa vải Ailsa"
+                                                        href=""
+                                                        class="product-item-link">Sofa vải Ailsa</a>
+                                                    </h3>
+                                                    <div class="item-price">
+                                                      <div class="price-box price-final_price">
+                                                        <span class="special-price">
+                                                          <span class="price-container">
+                                                            <span class="price-wrapper">
+                                                              <span class="price">25,678,000đ</span>
+                                                            </span>
+                                                          </span>
+                                                        </span>
+                                                      </div>
+                                                    </div>                                                   
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="owl-item cloned" style="width: 210px; margin-right: 10px;">
+                                        <div class="item">
+                                          <div class="ant-product-item">
+                                            <div class="product_row">
+                                              <div class="item">
+                                                <div class="item-inner">
+                                                  <div class="image-container">
+                                                    <a href=""
+                                                      class="product-item-photo">
+                                                      <img class="product-image-photo img-responsive center-block"
+                                                        src="https://veles.exdomain.net/image/cache/catalog/products/hnh5hpwq-1538272611894235255809-285x215.jpg"
+                                                        alt="Tuva Sofa">
+                                                    </a>
+                                                  </div>
+                                                  <div class="box-info">
+                                                    <h3 class="product-item-name">
+                                                      <a title="Tuva Sofa" href=""
+                                                        class="product-item-link">Tuva Sofa</a>
+                                                    </h3>
+                                                    <div class="item-price">
+                                                      <div class="price-box price-final_price">
+                                                        <span class="special-price">
+                                                          <span class="price-container">
+                                                            <span class="price-wrapper">
+                                                              <span class="price">18,500,000đ</span>
+                                                            </span>
+                                                          </span>
+                                                        </span>
+                                                      </div>
+                                                    </div>
+                                                   </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <div class="col-sm-12">
-                    <label>6.700.000 đ</label>
-                </div>
+              </div>
             </div>
-            <div class="col-sm-3">
-                <img src="assets/Anh/Giuong-ngu-468x468.jpg">
-                <div class="col-sm-12">
-                    <label class="col-sm-12"> GIƯỜNG NGỦ ALICE KING - TRẮNG </label>
+          </section>
+          <section class="awe-section-4">
+            <div class="section_product">
+              <div class="container">
+                <div class="row">
+                  <div class="col-md-12 e-tabs not-dqtab ajax-tab-1" data-section="ajax-tab-1">
+                    <div class="content">
+                      <div>
+                        <div class="section-head"> <span class="group-icon"><i class="fa fa-dashcube"></i></span>
+                          <h2>Phòng khách</h2>
+                          <ul class="tabs tabs-title tab-desktop ajax clearfix">
+                            <li class="tab-link has-content current" data-tabs=".wrapper-tab" data-tab=".tab-0">
+                              <span>Bàn cà phê</span>
+                            </li>
+                            <li class="tab-link has-content " data-tabs=".wrapper-tab" data-tab=".tab-1"> <span>Ghế
+                                sofa</span> </li>
+                            <li class="tab-link has-content " data-tabs=".wrapper-tab" data-tab=".tab-2"> <span>Kệ
+                                TV</span> </li>
+                            <li class="tab-link has-content " data-tabs=".wrapper-tab" data-tab=".tab-3"> <span>Tủ &amp;
+                                kệ</span> </li>
+                          </ul>
+                        </div>
+                        <div class="wrapper-tab">
+                          <div class="tab-0 tab-content current">
+                            <div class="section-tour-owl2 products products-view-grid owl-carousel owl-loaded owl-drag"
+                              data-lg-items="4" data-md-items="4" data-sm-items="3" data-xs-items="2" data-xss-items="2"
+                              data-margin="10" data-nav="false" data-dot="false">
+                              <div class="owl-stage-outer owl-height" style="height: 294px;">
+                                <div class="owl-stage"
+                                  style="transform: translate3d(-1180px, 0px, 0px); transition: all 0s ease 0s; width: 3540px;">
+                                  <div class="owl-item cloned" style="width: 285px; margin-right: 10px;">
+                                    <div class="item">
+                                      <div class="ant-product-item">
+                                        <div class="product_row">
+                                          <div class="item">
+                                            <div class="item-inner">
+                                              <div class="image-container"> <a
+                                                  href=""
+                                                  class="product-item-photo"> <img
+                                                    class="product-image-photo img-responsive center-block "
+                                                    src="https://veles.exdomain.net/image/cache/catalog/products/10-mau-ban-cafe-ly-tuong-cho-phong-khach-doc-7-8664-285x215.jpg"
+                                                    alt="Bàn cà phê Walsh"> </a> </div>
+                                              <div class="box-info">
+                                                <h3 class="product-item-name"> <a title="Bàn cà phê Walsh"
+                                                    href=""
+                                                    class="product-item-link"> Bàn cà phê Walsh </a> </h3>
+                                                <div class="item-price">
+                                                  <div class="price-box price-final_price"> <span class="special-price">
+                                                      <span class="price-container"> <span class="price-wrapper"> <span
+                                                            class="price">10,990,000đ</span> </span> </span> </span>
+                                                  </div>
+                                                </div>                                               
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="owl-item cloned" style="width: 285px; margin-right: 10px;">
+                                    <div class="item">
+                                      <div class="ant-product-item">
+                                        <div class="product_row">
+                                          <div class="item">
+                                            <div class="item-inner">
+                                              <div class="image-container"> <a
+                                                  href=""
+                                                  class="product-item-photo"> <img
+                                                    class="product-image-photo img-responsive center-block "
+                                                    src="https://veles.exdomain.net/image/cache/catalog/products/Ban-sofa-hien-dai-Twitter-500x500-285x215.jpg"
+                                                    alt="Bàn cà phê Silsden với Ottoman"> </a> </div>
+                                              <div class="box-info">
+                                                <h3 class="product-item-name"> <a title="Bàn cà phê Silsden với Ottoman"
+                                                    href=""
+                                                    class="product-item-link"> Bàn cà phê Silsden với Ottoman </a> </h3>
+                                                <div class="item-price">
+                                                  <div class="price-box price-final_price"> <span class="special-price">
+                                                      <span class="price-container"> <span class="price-wrapper"> <span
+                                                            class="price">9,780,000đ</span> </span> </span> </span>
+                                                  </div>
+                                                </div>                                              
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="owl-item cloned" style="width: 285px; margin-right: 10px;">
+                                    <div class="item">
+                                      <div class="ant-product-item">
+                                        <div class="product_row">
+                                          <div class="item">
+                                            <div class="item-inner">
+                                              <div class="image-container"> <a
+                                                  href=""
+                                                  class="product-item-photo"> <img
+                                                    class="product-image-photo img-responsive center-block "
+                                                    src="https://veles.exdomain.net/image/cache/catalog/products/ban-tra-tron-111-500x500_1542252685-285x215.jpg"
+                                                    alt="Bàn cà phê Tenterden"> </a> </div>
+                                              <div class="box-info">
+                                                <h3 class="product-item-name"> <a title="Bàn cà phê Tenterden"
+                                                    href=""
+                                                    class="product-item-link"> Bàn cà phê Tenterden </a> </h3>
+                                                <div class="item-price">
+                                                  <div class="price-box price-final_price"> <span class="special-price">
+                                                      <span class="price-container"> <span class="price-wrapper"> <span
+                                                            class="price">39,900,000đ</span> </span> </span> </span>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="owl-item cloned" style="width: 285px; margin-right: 10px;">
+                                    <div class="item">
+                                      <div class="ant-product-item">
+                                        <div class="product_row">
+                                          <div class="item">
+                                            <div class="item-inner">
+                                              <div class="image-container"> <a
+                                                  href=""
+                                                  class="product-item-photo"> <img
+                                                    class="product-image-photo img-responsive center-block "
+                                                    src="https://veles.exdomain.net/image/cache/catalog/products/unnamed-285x215.jpg"
+                                                    alt="Bàn cà phê Carshalton"> </a> </div>
+                                              <div class="box-info">
+                                                <h3 class="product-item-name"> <a title="Bàn cà phê Carshalton"
+                                                    href=""
+                                                    class="product-item-link"> Bàn cà phê Carshalton </a> </h3>
+                                                <div class="item-price">
+                                                  <div class="price-box price-final_price"> <span class="special-price">
+                                                      <span class="price-container"> <span class="price-wrapper"> <span
+                                                            class="price">3,450,000đ</span> </span> </span> </span>
+                                                  </div>
+                                                </div>                                               
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="owl-item active" style="width: 285px; margin-right: 10px;">
+                                    <div class="item">
+                                      <div class="ant-product-item">
+                                        <div class="product_row">
+                                          <div class="item">
+                                            <div class="item-inner">
+                                              <div class="image-container"> <a
+                                                  href=""
+                                                  class="product-item-photo"> <img
+                                                    class="product-image-photo img-responsive center-block "
+                                                    src="https://veles.exdomain.net/image/cache/catalog/products/10-mau-ban-cafe-ly-tuong-cho-phong-khach-doc-7-8664-285x215.jpg"
+                                                    alt="Bàn cà phê Walsh"> </a> </div>
+                                              <div class="box-info">
+                                                <h3 class="product-item-name"> <a title="Bàn cà phê Walsh"
+                                                    href=""
+                                                    class="product-item-link"> Bàn cà phê Walsh </a> </h3>
+                                                <div class="item-price">
+                                                  <div class="price-box price-final_price"> <span class="special-price">
+                                                      <span class="price-container"> <span class="price-wrapper"> <span
+                                                            class="price">10,990,000đ</span> </span> </span> </span>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="owl-item active" style="width: 285px; margin-right: 10px;">
+                                    <div class="item">
+                                      <div class="ant-product-item">
+                                        <div class="product_row">
+                                          <div class="item">
+                                            <div class="item-inner">
+                                              <div class="image-container"> <a
+                                                  href=""
+                                                  class="product-item-photo"> <img
+                                                    class="product-image-photo img-responsive center-block "
+                                                    src="https://veles.exdomain.net/image/cache/catalog/products/Ban-sofa-hien-dai-Twitter-500x500-285x215.jpg"
+                                                    alt="Bàn cà phê Silsden với Ottoman"> </a> </div>
+                                              <div class="box-info">
+                                                <h3 class="product-item-name"> <a title="Bàn cà phê Silsden với Ottoman"
+                                                    href=""
+                                                    class="product-item-link"> Bàn cà phê Silsden với Ottoman </a> </h3>
+                                                <div class="item-price">
+                                                  <div class="price-box price-final_price"> <span class="special-price">
+                                                      <span class="price-container"> <span class="price-wrapper"> <span
+                                                            class="price">9,780,000đ</span> </span> </span> </span>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="owl-item active" style="width: 285px; margin-right: 10px;">
+                                    <div class="item">
+                                      <div class="ant-product-item">
+                                        <div class="product_row">
+                                          <div class="item">
+                                            <div class="item-inner">
+                                              <div class="image-container"> <a
+                                                  href=""
+                                                  class="product-item-photo"> <img
+                                                    class="product-image-photo img-responsive center-block "
+                                                    src="https://veles.exdomain.net/image/cache/catalog/products/ban-tra-tron-111-500x500_1542252685-285x215.jpg"
+                                                    alt="Bàn cà phê Tenterden"> </a> </div>
+                                              <div class="box-info">
+                                                <h3 class="product-item-name"> <a title="Bàn cà phê Tenterden"
+                                                    href=""
+                                                    class="product-item-link"> Bàn cà phê Tenterden </a> </h3>                                             
+                                                <div class="item-price">
+                                                  <div class="price-box price-final_price"> <span class="special-price">
+                                                      <span class="price-container"> <span class="price-wrapper"> <span
+                                                            class="price">39,900,000đ</span> </span> </span> </span>
+                                                  </div>
+                                                </div>                                              
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="owl-item active" style="width: 285px; margin-right: 10px;">
+                                    <div class="item">
+                                      <div class="ant-product-item">
+                                        <div class="product_row">
+                                          <div class="item">
+                                            <div class="item-inner">
+                                              <div class="image-container"> <a
+                                                  href=""
+                                                  class="product-item-photo"> <img
+                                                    class="product-image-photo img-responsive center-block "
+                                                    src="https://veles.exdomain.net/image/cache/catalog/products/unnamed-285x215.jpg"
+                                                    alt="Bàn cà phê Carshalton"> </a> </div>
+                                              <div class="box-info">
+                                                <h3 class="product-item-name"> <a title="Bàn cà phê Carshalton"
+                                                    href=""
+                                                    class="product-item-link"> Bàn cà phê Carshalton </a> </h3>
+                                                <div class="item-price">
+                                                  <div class="price-box price-final_price"> <span class="special-price">
+                                                      <span class="price-container"> <span class="price-wrapper"> <span
+                                                            class="price">3,450,000đ</span> </span> </span> </span>
+                                                  </div>
+                                                </div>                                             
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="owl-item cloned" style="width: 285px; margin-right: 10px;">
+                                    <div class="item">
+                                      <div class="ant-product-item">
+                                        <div class="product_row">
+                                          <div class="item">
+                                            <div class="item-inner">
+                                              <div class="image-container"> <a
+                                                  href=""
+                                                  class="product-item-photo"> <img
+                                                    class="product-image-photo img-responsive center-block "
+                                                    src="https://veles.exdomain.net/image/cache/catalog/products/10-mau-ban-cafe-ly-tuong-cho-phong-khach-doc-7-8664-285x215.jpg"
+                                                    alt="Bàn cà phê Walsh"> </a> </div>
+                                              <div class="box-info">
+                                                <h3 class="product-item-name"> <a title="Bàn cà phê Walsh"
+                                                    href=""
+                                                    class="product-item-link"> Bàn cà phê Walsh </a> </h3>
+                                                <div class="item-price">
+                                                  <div class="price-box price-final_price"> <span class="special-price">
+                                                      <span class="price-container"> <span class="price-wrapper"> <span
+                                                            class="price">10,990,000đ</span> </span> </span> </span>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="owl-item cloned" style="width: 285px; margin-right: 10px;">
+                                    <div class="item">
+                                      <div class="ant-product-item">
+                                        <div class="product_row">
+                                          <div class="item">
+                                            <div class="item-inner">
+                                              <div class="image-container"> <a
+                                                  href="https://veles.exdomain.net/ban-ca-phe-silsden-voi-ottoman"
+                                                  class="product-item-photo"> <img
+                                                    class="product-image-photo img-responsive center-block "
+                                                    src="https://veles.exdomain.net/image/cache/catalog/products/Ban-sofa-hien-dai-Twitter-500x500-285x215.jpg"
+                                                    alt="Bàn cà phê Silsden với Ottoman"> </a> </div>
+                                              <div class="box-info">
+                                                <h3 class="product-item-name"> <a title="Bàn cà phê Silsden với Ottoman"
+                                                    href="https://veles.exdomain.net/ban-ca-phe-silsden-voi-ottoman"
+                                                    class="product-item-link"> Bàn cà phê Silsden với Ottoman </a> </h3>
+                                                <div class="product-reviews-summary">
+                                                  <div class="rating-summary">
+                                                    <div class="bizweb-product-reviews-badge" data-id="1017908240">
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                                <div class="item-price">
+                                                  <div class="price-box price-final_price"> <span class="special-price">
+                                                      <span class="price-container"> <span class="price-wrapper"> <span
+                                                            class="price">9,780,000đ</span> </span> </span> </span>
+                                                  </div>
+                                                </div>
+                                                <div class="box-hover hidden-sm hidden-xs hidden-md">
+                                                  <div class="add-to-links">
+                                                    <div class="actions-primary"> <input type="hidden" name="id"
+                                                        value="1035080072"> <button
+                                                        onclick="window.location.href='https://veles.exdomain.net/checkout/cart/add?product_id=65&amp;redirect=true'"
+                                                        class="tt-btn-addtocart btn-buy btn-cart btn btn-gray left-to add_to_cart"
+                                                        title="Cho vào giỏ hàng"> <i class="fa fa-shopping-cart"></i>
+                                                      </button> </div> <a
+                                                      href="https://veles.exdomain.net/ban-ca-phe-silsden-voi-ottoman"
+                                                      class="quick-view" title="Xem nhanh"> <i class="fa fa-search"></i>
+                                                    </a>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="owl-item cloned" style="width: 285px; margin-right: 10px;">
+                                    <div class="item">
+                                      <div class="ant-product-item">
+                                        <div class="product_row">
+                                          <div class="item">
+                                            <div class="item-inner">
+                                              <div class="image-container"> <a
+                                                  href="https://veles.exdomain.net/ban-ca-phe-tenterden"
+                                                  class="product-item-photo"> <img
+                                                    class="product-image-photo img-responsive center-block "
+                                                    src="https://veles.exdomain.net/image/cache/catalog/products/ban-tra-tron-111-500x500_1542252685-285x215.jpg"
+                                                    alt="Bàn cà phê Tenterden"> </a> </div>
+                                              <div class="box-info">
+                                                <h3 class="product-item-name"> <a title="Bàn cà phê Tenterden"
+                                                    href="https://veles.exdomain.net/ban-ca-phe-tenterden"
+                                                    class="product-item-link"> Bàn cà phê Tenterden </a> </h3>
+                                                <div class="product-reviews-summary">
+                                                  <div class="rating-summary">
+                                                    <div class="bizweb-product-reviews-badge" data-id="1017908240">
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                                <div class="item-price">
+                                                  <div class="price-box price-final_price"> <span class="special-price">
+                                                      <span class="price-container"> <span class="price-wrapper"> <span
+                                                            class="price">39,900,000đ</span> </span> </span> </span>
+                                                  </div>
+                                                </div>
+                                                <div class="box-hover hidden-sm hidden-xs hidden-md">
+                                                  <div class="add-to-links">
+                                                    <div class="actions-primary"> <input type="hidden" name="id"
+                                                        value="1035080072"> <button
+                                                        onclick="window.location.href='https://veles.exdomain.net/checkout/cart/add?product_id=64&amp;redirect=true'"
+                                                        class="tt-btn-addtocart btn-buy btn-cart btn btn-gray left-to add_to_cart"
+                                                        title="Cho vào giỏ hàng"> <i class="fa fa-shopping-cart"></i>
+                                                      </button> </div> <a
+                                                      href="https://veles.exdomain.net/ban-ca-phe-tenterden"
+                                                      class="quick-view" title="Xem nhanh"> <i class="fa fa-search"></i>
+                                                    </a>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="owl-item cloned" style="width: 285px; margin-right: 10px;">
+                                    <div class="item">
+                                      <div class="ant-product-item">
+                                        <div class="product_row">
+                                          <div class="item">
+                                            <div class="item-inner">
+                                              <div class="image-container"> <a
+                                                  href="https://veles.exdomain.net/ban-ca-phe-carshalton"
+                                                  class="product-item-photo"> <img
+                                                    class="product-image-photo img-responsive center-block "
+                                                    src="https://veles.exdomain.net/image/cache/catalog/products/unnamed-285x215.jpg"
+                                                    alt="Bàn cà phê Carshalton"> </a> </div>
+                                              <div class="box-info">
+                                                <h3 class="product-item-name"> <a title="Bàn cà phê Carshalton"
+                                                    href="https://veles.exdomain.net/ban-ca-phe-carshalton"
+                                                    class="product-item-link"> Bàn cà phê Carshalton </a> </h3>
+                                                <div class="product-reviews-summary">
+                                                  <div class="rating-summary">
+                                                    <div class="bizweb-product-reviews-badge" data-id="1017908240">
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                                <div class="item-price">
+                                                  <div class="price-box price-final_price"> <span class="special-price">
+                                                      <span class="price-container"> <span class="price-wrapper"> <span
+                                                            class="price">3,450,000đ</span> </span> </span> </span>
+                                                  </div>
+                                                </div>
+                                                <div class="box-hover hidden-sm hidden-xs hidden-md">
+                                                  <div class="add-to-links">
+                                                    <div class="actions-primary"> <input type="hidden" name="id"
+                                                        value="1035080072"> <button
+                                                        onclick="window.location.href='https://veles.exdomain.net/checkout/cart/add?product_id=63&amp;redirect=true'"
+                                                        class="tt-btn-addtocart btn-buy btn-cart btn btn-gray left-to add_to_cart"
+                                                        title="Cho vào giỏ hàng"> <i class="fa fa-shopping-cart"></i>
+                                                      </button> </div> <a
+                                                      href="https://veles.exdomain.net/ban-ca-phe-carshalton"
+                                                      class="quick-view" title="Xem nhanh"> <i class="fa fa-search"></i>
+                                                    </a>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>   
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <div class="col-sm-12">
-                    <label>12.345.000 đ</label>
-                </div>
+              </div>
             </div>
+          </section>
+          <section class="awe-section-5 hidden-xs">
+            <div class="section_banner_2">
+              <div class="container">
+                <div class="row">
+                  <div class="col-md-12"> <a href=""> <img class="lazyload"
+                        data-original="https://veles.exdomain.net/image/cache/catalog/banner/bannervalas-1920x400-1-1920x400.jpg"
+                        alt=""
+                        src="https://veles.exdomain.net/image/cache/catalog/banner/bannervalas-1920x400-1-1920x400.jpg"
+                        style="opacity: 1;"> </a> </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="awe-section-4">
+            <div class="section_product">
+              <div class="container">
+                <div class="row">
+                  <div class="col-md-12 e-tabs not-dqtab ajax-tab-1" data-section="ajax-tab-1">
+                    <div class="content">
+                      <div>
+                        <div class="section-head"> <span class="group-icon"><i class="fa fa-dashcube"></i></span>
+                          <h2>Phòng ngủ</h2>
+                          <ul class="tabs tabs-title tab-desktop ajax clearfix">
+                            <li class="tab-link has-content current" data-tabs=".wrapper-tab" data-tab=".tab-0">
+                              <span>Giường ngủ</span>
+                            </li>
+                            <li class="tab-link has-content " data-tabs=".wrapper-tab" data-tab=".tab-1"> <span>Tủ quần
+                                áo</span> </li>
+                          </ul>
+                        </div>
+                        <div class="wrapper-tab">
+                          <div class="tab-0 tab-content current">
+                            <div class="section-tour-owl2 products products-view-grid owl-carousel owl-loaded owl-drag"
+                              data-lg-items="4" data-md-items="4" data-sm-items="3" data-xs-items="2" data-xss-items="2"
+                              data-margin="10" data-nav="false" data-dot="false">
+                              <div class="owl-stage-outer owl-height" style="height: 294px;">
+                                <div class="owl-stage"
+                                  style="transform: translate3d(-1180px, 0px, 0px); transition: all 0s ease 0s; width: 3245px;">
+                                  <div class="owl-item cloned" style="width: 285px; margin-right: 10px;">
+                                    <div class="item">
+                                      <div class="ant-product-item">
+                                        <div class="product_row">
+                                          <div class="item">
+                                            <div class="item-inner">
+                                              <div class="image-container"> <a
+                                                  href=""
+                                                  class="product-item-photo"> <img
+                                                    class="product-image-photo img-responsive center-block "
+                                                    src="https://veles.exdomain.net/image/cache/catalog/products/Giuong-ngu-hien-dai-GN07-500x500-285x215.jpg"
+                                                    alt="Giường ngủ Alice King - Trắng"> </a> </div>
+                                              <div class="box-info">
+                                                <h3 class="product-item-name"> <a title="Giường ngủ Alice King - Trắng"
+                                                    href=""
+                                                    class="product-item-link"> Giường ngủ Alice King - Trắng </a> </h3>                                                
+                                                <div class="item-price">
+                                                  <div class="price-box price-final_price"> <span class="special-price">
+                                                      <span class="price-container"> <span class="price-wrapper"> <span
+                                                            class="price">12,345,000đ</span> </span> </span> </span>
+                                                  </div>
+                                                </div>                                                
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="owl-item cloned" style="width: 285px; margin-right: 10px;">
+                                    <div class="item">
+                                      <div class="ant-product-item">
+                                        <div class="product_row">
+                                          <div class="item">
+                                            <div class="item-inner">
+                                              <div class="image-container"> <a
+                                                  href=""
+                                                  class="product-item-photo"> <img
+                                                    class="product-image-photo img-responsive center-block "
+                                                    src="https://veles.exdomain.net/image/cache/catalog/products/nhung-thiet-ke-giuong-ngu-1-nguoi-doc-dao-the-hien-duoc-ca-tinh-rieng-16-500x500-285x215.png"
+                                                    alt="Giường Tara - Màu be"> </a> </div>
+                                              <div class="box-info">
+                                                <h3 class="product-item-name"> <a title="Giường Tara - Màu be"
+                                                    href=""
+                                                    class="product-item-link"> Giường Tara - Màu be </a> </h3>
+                                                <div class="item-price">
+                                                  <div class="price-box price-final_price"> <span class="special-price">
+                                                      <span class="price-container"> <span class="price-wrapper"> <span
+                                                            class="price">6,780,000đ</span> </span> </span> </span>
+                                                  </div>
+                                                </div>                                               
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="owl-item cloned" style="width: 285px; margin-right: 10px;">
+                                    <div class="item">
+                                      <div class="ant-product-item">
+                                        <div class="product_row">
+                                          <div class="item">
+                                            <div class="item-inner">
+                                              <div class="image-container"> <a
+                                                  href=""
+                                                  class="product-item-photo"> <img
+                                                    class="product-image-photo img-responsive center-block "
+                                                    src="https://veles.exdomain.net/image/cache/catalog/products/giuong-don-tien-dung-500x500-285x215.jpg"
+                                                    alt="Giường Iluka"> </a> </div>
+                                              <div class="box-info">
+                                                <h3 class="product-item-name"> <a title="Giường Iluka"
+                                                    href=""
+                                                    class="product-item-link"> Giường Iluka </a> </h3>
+                                                <div class="item-price">
+                                                  <div class="price-box price-final_price"> <span class="special-price">
+                                                      <span class="price-container"> <span class="price-wrapper"> <span
+                                                            class="price">7,800,000đ</span> </span> </span> </span>
+                                                  </div>
+                                                </div>                                                
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="owl-item cloned" style="width: 285px; margin-right: 10px;">
+                                    <div class="item">
+                                      <div class="ant-product-item">
+                                        <div class="product_row">
+                                          <div class="item">
+                                            <div class="item-inner">
+                                              <div class="image-container"> <a
+                                                  href=""
+                                                  class="product-item-photo"> <img
+                                                    class="product-image-photo img-responsive center-block "
+                                                    src="https://veles.exdomain.net/image/cache/catalog/products/Giuong-ngu-hien-dai-GN07-500x500-285x215.jpg"
+                                                    alt="Giường ngủ Alice King - Trắng"> </a> </div>
+                                              <div class="box-info">
+                                                <h3 class="product-item-name"> <a title="Giường ngủ Alice King - Trắng"
+                                                    href=""
+                                                    class="product-item-link"> Giường ngủ Alice King - Trắng </a> </h3>                                               
+                                                <div class="item-price">
+                                                  <div class="price-box price-final_price"> <span class="special-price">
+                                                      <span class="price-container"> <span class="price-wrapper"> <span
+                                                            class="price">12,345,000đ</span> </span> </span> </span>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="owl-item active" style="width: 285px; margin-right: 10px;">
+                                    <div class="item">
+                                      <div class="ant-product-item">
+                                        <div class="product_row">
+                                          <div class="item">
+                                            <div class="item-inner">
+                                              <div class="image-container"> <a
+                                                  href="https://veles.exdomain.net/giuong-tara-mau-be"
+                                                  class="product-item-photo"> <img
+                                                    class="product-image-photo img-responsive center-block "
+                                                    src="https://veles.exdomain.net/image/cache/catalog/products/nhung-thiet-ke-giuong-ngu-1-nguoi-doc-dao-the-hien-duoc-ca-tinh-rieng-16-500x500-285x215.png"
+                                                    alt="Giường Tara - Màu be"> </a> </div>
+                                              <div class="box-info">
+                                                <h3 class="product-item-name"> <a title="Giường Tara - Màu be"
+                                                    href="https://veles.exdomain.net/giuong-tara-mau-be"
+                                                    class="product-item-link"> Giường Tara - Màu be </a> </h3>
+                                                <div class="product-reviews-summary">
+                                                  <div class="rating-summary">
+                                                    <div class="bizweb-product-reviews-badge" data-id="1017908240">
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                                <div class="item-price">
+                                                  <div class="price-box price-final_price"> <span class="special-price">
+                                                      <span class="price-container"> <span class="price-wrapper"> <span
+                                                            class="price">6,780,000đ</span> </span> </span> </span>
+                                                  </div>
+                                                </div>
+                                                <div class="box-hover hidden-sm hidden-xs hidden-md">
+                                                  <div class="add-to-links">
+                                                    <div class="actions-primary"> <input type="hidden" name="id"
+                                                        value="1035080072"> <button
+                                                        onclick="window.location.href='https://veles.exdomain.net/checkout/cart/add?product_id=72&amp;redirect=true'"
+                                                        class="tt-btn-addtocart btn-buy btn-cart btn btn-gray left-to add_to_cart"
+                                                        title="Cho vào giỏ hàng"> <i class="fa fa-shopping-cart"></i>
+                                                      </button> </div> <a
+                                                      href="https://veles.exdomain.net/giuong-tara-mau-be"
+                                                      class="quick-view" title="Xem nhanh"> <i class="fa fa-search"></i>
+                                                    </a>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="owl-item active" style="width: 285px; margin-right: 10px;">
+                                    <div class="item">
+                                      <div class="ant-product-item">
+                                        <div class="product_row">
+                                          <div class="item">
+                                            <div class="item-inner">
+                                              <div class="image-container"> <a
+                                                  href="https://veles.exdomain.net/giuong-iluka"
+                                                  class="product-item-photo"> <img
+                                                    class="product-image-photo img-responsive center-block "
+                                                    src="https://veles.exdomain.net/image/cache/catalog/products/giuong-don-tien-dung-500x500-285x215.jpg"
+                                                    alt="Giường Iluka"> </a> </div>
+                                              <div class="box-info">
+                                                <h3 class="product-item-name"> <a title="Giường Iluka"
+                                                    href="https://veles.exdomain.net/giuong-iluka"
+                                                    class="product-item-link"> Giường Iluka </a> </h3>
+                                                <div class="product-reviews-summary">
+                                                  <div class="rating-summary">
+                                                    <div class="bizweb-product-reviews-badge" data-id="1017908240">
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                                <div class="item-price">
+                                                  <div class="price-box price-final_price"> <span class="special-price">
+                                                      <span class="price-container"> <span class="price-wrapper"> <span
+                                                            class="price">7,800,000đ</span> </span> </span> </span>
+                                                  </div>
+                                                </div>
+                                                <div class="box-hover hidden-sm hidden-xs hidden-md">
+                                                  <div class="add-to-links">
+                                                    <div class="actions-primary"> <input type="hidden" name="id"
+                                                        value="1035080072"> <button
+                                                        onclick="window.location.href='https://veles.exdomain.net/checkout/cart/add?product_id=71&amp;redirect=true'"
+                                                        class="tt-btn-addtocart btn-buy btn-cart btn btn-gray left-to add_to_cart"
+                                                        title="Cho vào giỏ hàng"> <i class="fa fa-shopping-cart"></i>
+                                                      </button> </div> <a href="https://veles.exdomain.net/giuong-iluka"
+                                                      class="quick-view" title="Xem nhanh"> <i class="fa fa-search"></i>
+                                                    </a>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="owl-item active" style="width: 285px; margin-right: 10px;">
+                                    <div class="item">
+                                      <div class="ant-product-item">
+                                        <div class="product_row">
+                                          <div class="item">
+                                            <div class="item-inner">
+                                              <div class="image-container"> <a
+                                                  href="https://veles.exdomain.net/giuong-ngu-alice-king-trang"
+                                                  class="product-item-photo"> <img
+                                                    class="product-image-photo img-responsive center-block "
+                                                    src="https://veles.exdomain.net/image/cache/catalog/products/Giuong-ngu-hien-dai-GN07-500x500-285x215.jpg"
+                                                    alt="Giường ngủ Alice King - Trắng"> </a> </div>
+                                              <div class="box-info">
+                                                <h3 class="product-item-name"> <a title="Giường ngủ Alice King - Trắng"
+                                                    href="https://veles.exdomain.net/giuong-ngu-alice-king-trang"
+                                                    class="product-item-link"> Giường ngủ Alice King - Trắng </a> </h3>
+                                                <div class="product-reviews-summary">
+                                                  <div class="rating-summary">
+                                                    <div class="bizweb-product-reviews-badge" data-id="1017908240">
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                                <div class="item-price">
+                                                  <div class="price-box price-final_price"> <span class="special-price">
+                                                      <span class="price-container"> <span class="price-wrapper"> <span
+                                                            class="price">12,345,000đ</span> </span> </span> </span>
+                                                  </div>
+                                                </div>
+                                                <div class="box-hover hidden-sm hidden-xs hidden-md">
+                                                  <div class="add-to-links">
+                                                    <div class="actions-primary"> <input type="hidden" name="id"
+                                                        value="1035080072"> <button
+                                                        onclick="window.location.href='https://veles.exdomain.net/checkout/cart/add?product_id=70&amp;redirect=true'"
+                                                        class="tt-btn-addtocart btn-buy btn-cart btn btn-gray left-to add_to_cart"
+                                                        title="Cho vào giỏ hàng"> <i class="fa fa-shopping-cart"></i>
+                                                      </button> </div> <a
+                                                      href="https://veles.exdomain.net/giuong-ngu-alice-king-trang"
+                                                      class="quick-view" title="Xem nhanh"> <i class="fa fa-search"></i>
+                                                    </a>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="owl-item active" style="width: 285px; margin-right: 10px;">
+                                    <div class="item">
+                                      <div class="ant-product-item">
+                                        <div class="product_row">
+                                          <div class="item">
+                                            <div class="item-inner">
+                                              <div class="image-container"> <a
+                                                  href="https://veles.exdomain.net/giuong-tara-mau-be"
+                                                  class="product-item-photo"> <img
+                                                    class="product-image-photo img-responsive center-block "
+                                                    src="https://veles.exdomain.net/image/cache/catalog/products/nhung-thiet-ke-giuong-ngu-1-nguoi-doc-dao-the-hien-duoc-ca-tinh-rieng-16-500x500-285x215.png"
+                                                    alt="Giường Tara - Màu be"> </a> </div>
+                                              <div class="box-info">
+                                                <h3 class="product-item-name"> <a title="Giường Tara - Màu be"
+                                                    href="https://veles.exdomain.net/giuong-tara-mau-be"
+                                                    class="product-item-link"> Giường Tara - Màu be </a> </h3>
+                                                <div class="product-reviews-summary">
+                                                  <div class="rating-summary">
+                                                    <div class="bizweb-product-reviews-badge" data-id="1017908240">
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                                <div class="item-price">
+                                                  <div class="price-box price-final_price"> <span class="special-price">
+                                                      <span class="price-container"> <span class="price-wrapper"> <span
+                                                            class="price">6,780,000đ</span> </span> </span> </span>
+                                                  </div>
+                                                </div>
+                                                <div class="box-hover hidden-sm hidden-xs hidden-md">
+                                                  <div class="add-to-links">
+                                                    <div class="actions-primary"> <input type="hidden" name="id"
+                                                        value="1035080072"> <button
+                                                        onclick="window.location.href='https://veles.exdomain.net/checkout/cart/add?product_id=72&amp;redirect=true'"
+                                                        class="tt-btn-addtocart btn-buy btn-cart btn btn-gray left-to add_to_cart"
+                                                        title="Cho vào giỏ hàng"> <i class="fa fa-shopping-cart"></i>
+                                                      </button> </div> <a
+                                                      href="https://veles.exdomain.net/giuong-tara-mau-be"
+                                                      class="quick-view" title="Xem nhanh"> <i class="fa fa-search"></i>
+                                                    </a>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="owl-item cloned" style="width: 285px; margin-right: 10px;">
+                                    <div class="item">
+                                      <div class="ant-product-item">
+                                        <div class="product_row">
+                                          <div class="item">
+                                            <div class="item-inner">
+                                              <div class="image-container"> <a
+                                                  href="https://veles.exdomain.net/giuong-iluka"
+                                                  class="product-item-photo"> <img
+                                                    class="product-image-photo img-responsive center-block "
+                                                    src="https://veles.exdomain.net/image/cache/catalog/products/giuong-don-tien-dung-500x500-285x215.jpg"
+                                                    alt="Giường Iluka"> </a> </div>
+                                              <div class="box-info">
+                                                <h3 class="product-item-name"> <a title="Giường Iluka"
+                                                    href="https://veles.exdomain.net/giuong-iluka"
+                                                    class="product-item-link"> Giường Iluka </a> </h3>
+                                                <div class="product-reviews-summary">
+                                                  <div class="rating-summary">
+                                                    <div class="bizweb-product-reviews-badge" data-id="1017908240">
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                                <div class="item-price">
+                                                  <div class="price-box price-final_price"> <span class="special-price">
+                                                      <span class="price-container"> <span class="price-wrapper"> <span
+                                                            class="price">7,800,000đ</span> </span> </span> </span>
+                                                  </div>
+                                                </div>
+                                                <div class="box-hover hidden-sm hidden-xs hidden-md">
+                                                  <div class="add-to-links">
+                                                    <div class="actions-primary"> <input type="hidden" name="id"
+                                                        value="1035080072"> <button
+                                                        onclick="window.location.href='https://veles.exdomain.net/checkout/cart/add?product_id=71&amp;redirect=true'"
+                                                        class="tt-btn-addtocart btn-buy btn-cart btn btn-gray left-to add_to_cart"
+                                                        title="Cho vào giỏ hàng"> <i class="fa fa-shopping-cart"></i>
+                                                      </button> </div> <a href="https://veles.exdomain.net/giuong-iluka"
+                                                      class="quick-view" title="Xem nhanh"> <i class="fa fa-search"></i>
+                                                    </a>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="owl-item cloned" style="width: 285px; margin-right: 10px;">
+                                    <div class="item">
+                                      <div class="ant-product-item">
+                                        <div class="product_row">
+                                          <div class="item">
+                                            <div class="item-inner">
+                                              <div class="image-container"> <a
+                                                  href="https://veles.exdomain.net/giuong-ngu-alice-king-trang"
+                                                  class="product-item-photo"> <img
+                                                    class="product-image-photo img-responsive center-block "
+                                                    src="https://veles.exdomain.net/image/cache/catalog/products/Giuong-ngu-hien-dai-GN07-500x500-285x215.jpg"
+                                                    alt="Giường ngủ Alice King - Trắng"> </a> </div>
+                                              <div class="box-info">
+                                                <h3 class="product-item-name"> <a title="Giường ngủ Alice King - Trắng"
+                                                    href="https://veles.exdomain.net/giuong-ngu-alice-king-trang"
+                                                    class="product-item-link"> Giường ngủ Alice King - Trắng </a> </h3>
+                                                <div class="product-reviews-summary">
+                                                  <div class="rating-summary">
+                                                    <div class="bizweb-product-reviews-badge" data-id="1017908240">
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                                <div class="item-price">
+                                                  <div class="price-box price-final_price"> <span class="special-price">
+                                                      <span class="price-container"> <span class="price-wrapper"> <span
+                                                            class="price">12,345,000đ</span> </span> </span> </span>
+                                                  </div>
+                                                </div>
+                                                <div class="box-hover hidden-sm hidden-xs hidden-md">
+                                                  <div class="add-to-links">
+                                                    <div class="actions-primary"> <input type="hidden" name="id"
+                                                        value="1035080072"> <button
+                                                        onclick="window.location.href='https://veles.exdomain.net/checkout/cart/add?product_id=70&amp;redirect=true'"
+                                                        class="tt-btn-addtocart btn-buy btn-cart btn btn-gray left-to add_to_cart"
+                                                        title="Cho vào giỏ hàng"> <i class="fa fa-shopping-cart"></i>
+                                                      </button> </div> <a
+                                                      href="https://veles.exdomain.net/giuong-ngu-alice-king-trang"
+                                                      class="quick-view" title="Xem nhanh"> <i class="fa fa-search"></i>
+                                                    </a>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="owl-item cloned" style="width: 285px; margin-right: 10px;">
+                                    <div class="item">
+                                      <div class="ant-product-item">
+                                        <div class="product_row">
+                                          <div class="item">
+                                            <div class="item-inner">
+                                              <div class="image-container"> <a
+                                                  href="https://veles.exdomain.net/giuong-tara-mau-be"
+                                                  class="product-item-photo"> <img
+                                                    class="product-image-photo img-responsive center-block "
+                                                    src="https://veles.exdomain.net/image/cache/catalog/products/nhung-thiet-ke-giuong-ngu-1-nguoi-doc-dao-the-hien-duoc-ca-tinh-rieng-16-500x500-285x215.png"
+                                                    alt="Giường Tara - Màu be"> </a> </div>
+                                              <div class="box-info">
+                                                <h3 class="product-item-name"> <a title="Giường Tara - Màu be"
+                                                    href="https://veles.exdomain.net/giuong-tara-mau-be"
+                                                    class="product-item-link"> Giường Tara - Màu be </a> </h3>
+                                                <div class="product-reviews-summary">
+                                                  <div class="rating-summary">
+                                                    <div class="bizweb-product-reviews-badge" data-id="1017908240">
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                                <div class="item-price">
+                                                  <div class="price-box price-final_price"> <span class="special-price">
+                                                      <span class="price-container"> <span class="price-wrapper"> <span
+                                                            class="price">6,780,000đ</span> </span> </span> </span>
+                                                  </div>
+                                                </div>
+                                                <div class="box-hover hidden-sm hidden-xs hidden-md">
+                                                  <div class="add-to-links">
+                                                    <div class="actions-primary"> <input type="hidden" name="id"
+                                                        value="1035080072"> <button
+                                                        onclick="window.location.href='https://veles.exdomain.net/checkout/cart/add?product_id=72&amp;redirect=true'"
+                                                        class="tt-btn-addtocart btn-buy btn-cart btn btn-gray left-to add_to_cart"
+                                                        title="Cho vào giỏ hàng"> <i class="fa fa-shopping-cart"></i>
+                                                      </button> </div> <a
+                                                      href="https://veles.exdomain.net/giuong-tara-mau-be"
+                                                      class="quick-view" title="Xem nhanh"> <i class="fa fa-search"></i>
+                                                    </a>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>                          
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="awe-section-4">
+            <div class="section_product">
+              <div class="container">
+                <div class="row">
+                  <div class="col-md-12 e-tabs not-dqtab ajax-tab-1" data-section="ajax-tab-1">
+                    <div class="content">
+                      <div>
+                        <div class="section-head"> <span class="group-icon">
+                            <i class="fa fa-dashcube"></i></span>
+                          <h2>Đồ Trang Trí</h2>
+                          <ul class="tabs tabs-title tab-desktop ajax clearfix">
+                            <li class="tab-link has-content current" data-tabs=".wrapper-tab" data-tab=".tab-0">
+                              <span>Đồ trang trí</span>
+                            </li>
+                            <li class="tab-link has-content " data-tabs=".wrapper-tab" data-tab=".tab-1">
+                              <span>Gối trang trí</span>
+                            </li>
+                            <li class="tab-link has-content " data-tabs=".wrapper-tab" data-tab=".tab-2">
+                              <span>Thảm</span>
+                            </li>
+                            <li class="tab-link has-content " data-tabs=".wrapper-tab" data-tab=".tab-3">
+                              <span>Tranh nghệ thuật</span>
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="wrapper-tab">
+                          <div class="tab-0 tab-content current">
+                            <div class="section-tour-owl2 products products-view-grid owl-carousel owl-loaded owl-drag"
+                              data-lg-items="4" data-md-items="4" data-sm-items="3" data-xs-items="2" data-xss-items="2"
+                              data-margin="10" data-nav="false" data-dot="false">
+                              <div class="owl-stage-outer owl-height" style="height: 294px;">
+                                <div class="owl-stage"
+                                  style="transform: translate3d(-1180px, 0px, 0px); transition: all 0s ease 0s; width: 4720px;">
+                                  <div class="owl-item cloned" style="width: 285px; margin-right: 10px;">
+                                    <div class="item">
+                                      <div class="ant-product-item">
+                                        <div class="product_row">
+                                          <div class="item">
+                                            <div class="item-inner">
+                                              <div class="image-container">
+                                                <a href=""
+                                                  class="product-item-photo">
+                                                  <img class="product-image-photo img-responsive center-block "
+                                                    src="https://veles.exdomain.net/image/cache/catalog/products/e1e26cefb4ed44c58cb5713be0b8edf8-285x215.jpg"
+                                                    alt="Thảm chân bếp dài mèo mặt trăng"> </a>
+                                              </div>
+                                              <div class="box-info">
+                                                <h3 class="product-item-name"> <a
+                                                    title="Thảm chân bếp dài mèo mặt trăng"
+                                                    href=""
+                                                    class="product-item-link"> Thảm chân bếp dài mèo mặt trăng </a>
+                                                </h3>
+                                                <div class="item-price">
+                                                  <div class="price-box price-final_price"> <span class="special-price">
+                                                      <span class="price-container"> <span class="price-wrapper"> <span
+                                                            class="price">195,000đ</span> </span> </span> </span> </div>
+                                                </div>                                                
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="owl-item cloned" style="width: 285px; margin-right: 10px;">
+                                    <div class="item">
+                                      <div class="ant-product-item">
+                                        <div class="product_row">
+                                          <div class="item">
+                                            <div class="item-inner">
+                                              <div class="image-container"> <a
+                                                  href=""
+                                                  class="product-item-photo"> <img
+                                                    class="product-image-photo img-responsive center-block "
+                                                    src="https://veles.exdomain.net/image/cache/catalog/products/81764755f88349bd85dd25b5509bcc04-285x215.jpg"
+                                                    alt="Thảm chân Love hồng hạc"> </a> </div>
+                                              <div class="box-info">
+                                                <h3 class="product-item-name"> <a title="Thảm chân Love hồng hạc"
+                                                    href=""
+                                                    class="product-item-link"> Thảm chân Love hồng hạc </a> </h3>
+                                                <div class="item-price">
+                                                  <div class="price-box price-final_price"> <span class="special-price">
+                                                      <span class="price-container"> <span class="price-wrapper"> <span
+                                                            class="price">110,000đ</span> </span> </span> </span> </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="owl-item cloned" style="width: 285px; margin-right: 10px;">
+                                    <div class="item">
+                                      <div class="ant-product-item">
+                                        <div class="product_row">
+                                          <div class="item">
+                                            <div class="item-inner">
+                                              <div class="image-container"> <a
+                                                  href=""
+                                                  class="product-item-photo"> <img
+                                                    class="product-image-photo img-responsive center-block "
+                                                    src="https://veles.exdomain.net/image/cache/catalog/products/4f2b9cd715df4d7d9c31fb9d10b0dabd-600x450-285x215.jpg"
+                                                    alt="Thảm chân hoa mẫu đơn sweet house"> </a> </div>
+                                              <div class="box-info">
+                                                <h3 class="product-item-name"> <a
+                                                    title="Thảm chân hoa mẫu đơn sweet house"
+                                                    href=""
+                                                    class="product-item-link"> Thảm chân hoa mẫu đơn sweet house </a>
+                                                </h3>                                                
+                                                <div class="item-price">
+                                                  <div class="price-box price-final_price"> <span class="special-price">
+                                                      <span class="price-container"> <span class="price-wrapper"> <span
+                                                            class="price">110,000đ</span> </span> </span> </span> </div>
+                                                </div>                                               
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="owl-item cloned" style="width: 285px; margin-right: 10px;">
+                                    <div class="item">
+                                      <div class="ant-product-item">
+                                        <div class="product_row">
+                                          <div class="item">
+                                            <div class="item-inner">
+                                              <div class="image-container"> <a
+                                                  href=""
+                                                  class="product-item-photo"> <img
+                                                    class="product-image-photo img-responsive center-block "
+                                                    src="https://veles.exdomain.net/image/cache/catalog/products/5eb06204c5e942baa2e08d62b570b49b-285x215.jpg"
+                                                    alt="Tranh treo tường xương rồng nghệ thuật"> </a> </div>
+                                              <div class="box-info">
+                                                <h3 class="product-item-name"> <a
+                                                    title="Tranh treo tường xương rồng nghệ thuật"
+                                                    href=""
+                                                    class="product-item-link"> Tranh treo tường xương rồng nghệ thuật
+                                                  </a> </h3>
+                                                <div class="item-price">
+                                                  <div class="price-box price-final_price"> <span class="special-price">
+                                                      <span class="price-container"> <span class="price-wrapper"> <span
+                                                            class="price">396,000đ</span> </span> </span> </span> </div>
+                                                </div>                                               
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="owl-item active" style="width: 285px; margin-right: 10px;">
+                                    <div class="item">
+                                      <div class="ant-product-item">
+                                        <div class="product_row">
+                                          <div class="item">
+                                            <div class="item-inner">
+                                              <div class="image-container"> <a
+                                                  href="https://veles.exdomain.net/vo-goi-la-tra"
+                                                  class="product-item-photo"> <img
+                                                    class="product-image-photo img-responsive center-block "
+                                                    src="https://veles.exdomain.net/image/cache/catalog/products/9ac55d1ebc2d469ca1b88c1fc80947bc-285x215.jpg"
+                                                    alt="Vỏ gối lá trà"> </a> </div>
+                                              <div class="box-info">
+                                                <h3 class="product-item-name"> <a title="Vỏ gối lá trà"
+                                                    href="https://veles.exdomain.net/vo-goi-la-tra"
+                                                    class="product-item-link"> Vỏ gối lá trà </a> </h3>
+                                                <div class="product-reviews-summary">
+                                                  <div class="rating-summary">
+                                                    <div class="bizweb-product-reviews-badge" data-id="1017908240">
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                                <div class="item-price">
+                                                  <div class="price-box price-final_price"> <span class="special-price">
+                                                      <span class="price-container"> <span class="price-wrapper"> <span
+                                                            class="price">85,000đ</span> </span> </span> </span> </div>
+                                                </div>
+                                                <div class="box-hover hidden-sm hidden-xs hidden-md">
+                                                  <div class="add-to-links">
+                                                    <div class="actions-primary"> <input type="hidden" name="id"
+                                                        value="1035080072"> <button
+                                                        onclick="window.location.href='https://veles.exdomain.net/checkout/cart/add?product_id=101&amp;redirect=true'"
+                                                        class="tt-btn-addtocart btn-buy btn-cart btn btn-gray left-to add_to_cart"
+                                                        title="Cho vào giỏ hàng"> <i class="fa fa-shopping-cart"></i>
+                                                      </button> </div> <a
+                                                      href="https://veles.exdomain.net/vo-goi-la-tra" class="quick-view"
+                                                      title="Xem nhanh"> <i class="fa fa-search"></i> </a>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="owl-item active" style="width: 285px; margin-right: 10px;">
+                                    <div class="item">
+                                      <div class="ant-product-item">
+                                        <div class="product_row">
+                                          <div class="item">
+                                            <div class="item-inner">
+                                              <div class="image-container"> <a
+                                                  href="https://veles.exdomain.net/vo-goi-nua-trai-tim-mau-den"
+                                                  class="product-item-photo"> <img
+                                                    class="product-image-photo img-responsive center-block "
+                                                    src="https://veles.exdomain.net/image/cache/catalog/products/ab01c8d2cdc14bdba2b1053a31677b8a-285x215.jpg"
+                                                    alt="Vỏ gối nửa trái tim màu đen"> </a> </div>
+                                              <div class="box-info">
+                                                <h3 class="product-item-name"> <a title="Vỏ gối nửa trái tim màu đen"
+                                                    href="https://veles.exdomain.net/vo-goi-nua-trai-tim-mau-den"
+                                                    class="product-item-link"> Vỏ gối nửa trái tim màu đen </a> </h3>
+                                                <div class="product-reviews-summary">
+                                                  <div class="rating-summary">
+                                                    <div class="bizweb-product-reviews-badge" data-id="1017908240">
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                                <div class="item-price">
+                                                  <div class="price-box price-final_price"> <span class="special-price">
+                                                      <span class="price-container"> <span class="price-wrapper"> <span
+                                                            class="price">85,000đ</span> </span> </span> </span> </div>
+                                                </div>
+                                                <div class="box-hover hidden-sm hidden-xs hidden-md">
+                                                  <div class="add-to-links">
+                                                    <div class="actions-primary"> <input type="hidden" name="id"
+                                                        value="1035080072"> <button
+                                                        onclick="window.location.href='https://veles.exdomain.net/checkout/cart/add?product_id=100&amp;redirect=true'"
+                                                        class="tt-btn-addtocart btn-buy btn-cart btn btn-gray left-to add_to_cart"
+                                                        title="Cho vào giỏ hàng"> <i class="fa fa-shopping-cart"></i>
+                                                      </button> </div> <a
+                                                      href="https://veles.exdomain.net/vo-goi-nua-trai-tim-mau-den"
+                                                      class="quick-view" title="Xem nhanh"> <i class="fa fa-search"></i>
+                                                    </a>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="owl-item active" style="width: 285px; margin-right: 10px;">
+                                    <div class="item">
+                                      <div class="ant-product-item">
+                                        <div class="product_row">
+                                          <div class="item">
+                                            <div class="item-inner">
+                                              <div class="image-container"> <a
+                                                  href="https://veles.exdomain.net/vo-goi-xe-bus-london"
+                                                  class="product-item-photo"> <img
+                                                    class="product-image-photo img-responsive center-block "
+                                                    src="https://veles.exdomain.net/image/cache/catalog/products/54acd26741214178a39098044e02fa7b-285x215.jpg"
+                                                    alt="Vỏ gối xe bus London"> </a> </div>
+                                              <div class="box-info">
+                                                <h3 class="product-item-name"> <a title="Vỏ gối xe bus London"
+                                                    href="https://veles.exdomain.net/vo-goi-xe-bus-london"
+                                                    class="product-item-link"> Vỏ gối xe bus London </a> </h3>
+                                                <div class="product-reviews-summary">
+                                                  <div class="rating-summary">
+                                                    <div class="bizweb-product-reviews-badge" data-id="1017908240">
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                                <div class="item-price">
+                                                  <div class="price-box price-final_price"> <span class="special-price">
+                                                      <span class="price-container"> <span class="price-wrapper"> <span
+                                                            class="price">85,000đ</span> </span> </span> </span> </div>
+                                                </div>
+                                                <div class="box-hover hidden-sm hidden-xs hidden-md">
+                                                  <div class="add-to-links">
+                                                    <div class="actions-primary"> <input type="hidden" name="id"
+                                                        value="1035080072"> <button
+                                                        onclick="window.location.href='https://veles.exdomain.net/checkout/cart/add?product_id=99&amp;redirect=true'"
+                                                        class="tt-btn-addtocart btn-buy btn-cart btn btn-gray left-to add_to_cart"
+                                                        title="Cho vào giỏ hàng"> <i class="fa fa-shopping-cart"></i>
+                                                      </button> </div> <a
+                                                      href="https://veles.exdomain.net/vo-goi-xe-bus-london"
+                                                      class="quick-view" title="Xem nhanh"> <i class="fa fa-search"></i>
+                                                    </a>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="owl-item active" style="width: 285px; margin-right: 10px;">
+                                    <div class="item">
+                                      <div class="ant-product-item">
+                                        <div class="product_row">
+                                          <div class="item">
+                                            <div class="item-inner">
+                                              <div class="image-container"> <a
+                                                  href="https://veles.exdomain.net/vo-goi-xanh-trai-tim-ido"
+                                                  class="product-item-photo"> <img
+                                                    class="product-image-photo img-responsive center-block "
+                                                    src="https://veles.exdomain.net/image/cache/catalog/products/d10f51a9e94048c292fae2f0b51ff122-285x215.jpg"
+                                                    alt="Vỏ gối xanh trái tim ido"> </a> </div>
+                                              <div class="box-info">
+                                                <h3 class="product-item-name"> <a title="Vỏ gối xanh trái tim ido"
+                                                    href="https://veles.exdomain.net/vo-goi-xanh-trai-tim-ido"
+                                                    class="product-item-link"> Vỏ gối xanh trái tim ido </a> </h3>
+                                                <div class="product-reviews-summary">
+                                                  <div class="rating-summary">
+                                                    <div class="bizweb-product-reviews-badge" data-id="1017908240">
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                                <div class="item-price">
+                                                  <div class="price-box price-final_price"> <span class="special-price">
+                                                      <span class="price-container"> <span class="price-wrapper"> <span
+                                                            class="price">85,000đ</span> </span> </span> </span> </div>
+                                                </div>
+                                                <div class="box-hover hidden-sm hidden-xs hidden-md">
+                                                  <div class="add-to-links">
+                                                    <div class="actions-primary"> <input type="hidden" name="id"
+                                                        value="1035080072"> <button
+                                                        onclick="window.location.href='https://veles.exdomain.net/checkout/cart/add?product_id=98&amp;redirect=true'"
+                                                        class="tt-btn-addtocart btn-buy btn-cart btn btn-gray left-to add_to_cart"
+                                                        title="Cho vào giỏ hàng"> <i class="fa fa-shopping-cart"></i>
+                                                      </button> </div> <a
+                                                      href="https://veles.exdomain.net/vo-goi-xanh-trai-tim-ido"
+                                                      class="quick-view" title="Xem nhanh"> <i class="fa fa-search"></i>
+                                                    </a>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="owl-item" style="width: 285px; margin-right: 10px;">
+                                    <div class="item">
+                                      <div class="ant-product-item">
+                                        <div class="product_row">
+                                          <div class="item">
+                                            <div class="item-inner">
+                                              <div class="image-container"> <a
+                                                  href="https://veles.exdomain.net/tham-chan-bep-dai-meo-mat-trang"
+                                                  class="product-item-photo"> <img
+                                                    class="product-image-photo img-responsive center-block "
+                                                    src="https://veles.exdomain.net/image/cache/catalog/products/e1e26cefb4ed44c58cb5713be0b8edf8-285x215.jpg"
+                                                    alt="Thảm chân bếp dài mèo mặt trăng"> </a> </div>
+                                              <div class="box-info">
+                                                <h3 class="product-item-name"> <a
+                                                    title="Thảm chân bếp dài mèo mặt trăng"
+                                                    href="https://veles.exdomain.net/tham-chan-bep-dai-meo-mat-trang"
+                                                    class="product-item-link"> Thảm chân bếp dài mèo mặt trăng </a>
+                                                </h3>
+                                                <div class="product-reviews-summary">
+                                                  <div class="rating-summary">
+                                                    <div class="bizweb-product-reviews-badge" data-id="1017908240">
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                                <div class="item-price">
+                                                  <div class="price-box price-final_price"> <span class="special-price">
+                                                      <span class="price-container"> <span class="price-wrapper"> <span
+                                                            class="price">195,000đ</span> </span> </span> </span> </div>
+                                                </div>
+                                                <div class="box-hover hidden-sm hidden-xs hidden-md">
+                                                  <div class="add-to-links">
+                                                    <div class="actions-primary"> <input type="hidden" name="id"
+                                                        value="1035080072"> <button
+                                                        onclick="window.location.href='https://veles.exdomain.net/checkout/cart/add?product_id=97&amp;redirect=true'"
+                                                        class="tt-btn-addtocart btn-buy btn-cart btn btn-gray left-to add_to_cart"
+                                                        title="Cho vào giỏ hàng"> <i class="fa fa-shopping-cart"></i>
+                                                      </button> </div> <a
+                                                      href="https://veles.exdomain.net/tham-chan-bep-dai-meo-mat-trang"
+                                                      class="quick-view" title="Xem nhanh"> <i class="fa fa-search"></i>
+                                                    </a>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="owl-item" style="width: 285px; margin-right: 10px;">
+                                    <div class="item">
+                                      <div class="ant-product-item">
+                                        <div class="product_row">
+                                          <div class="item">
+                                            <div class="item-inner">
+                                              <div class="image-container"> <a
+                                                  href="https://veles.exdomain.net/tham-chan-love-hong-hac"
+                                                  class="product-item-photo"> <img
+                                                    class="product-image-photo img-responsive center-block "
+                                                    src="https://veles.exdomain.net/image/cache/catalog/products/81764755f88349bd85dd25b5509bcc04-285x215.jpg"
+                                                    alt="Thảm chân Love hồng hạc"> </a> </div>
+                                              <div class="box-info">
+                                                <h3 class="product-item-name"> <a title="Thảm chân Love hồng hạc"
+                                                    href="https://veles.exdomain.net/tham-chan-love-hong-hac"
+                                                    class="product-item-link"> Thảm chân Love hồng hạc </a> </h3>
+                                                <div class="product-reviews-summary">
+                                                  <div class="rating-summary">
+                                                    <div class="bizweb-product-reviews-badge" data-id="1017908240">
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                                <div class="item-price">
+                                                  <div class="price-box price-final_price"> <span class="special-price">
+                                                      <span class="price-container"> <span class="price-wrapper"> <span
+                                                            class="price">110,000đ</span> </span> </span> </span> </div>
+                                                </div>
+                                                <div class="box-hover hidden-sm hidden-xs hidden-md">
+                                                  <div class="add-to-links">
+                                                    <div class="actions-primary"> <input type="hidden" name="id"
+                                                        value="1035080072"> <button
+                                                        onclick="window.location.href='https://veles.exdomain.net/checkout/cart/add?product_id=96&amp;redirect=true'"
+                                                        class="tt-btn-addtocart btn-buy btn-cart btn btn-gray left-to add_to_cart"
+                                                        title="Cho vào giỏ hàng"> <i class="fa fa-shopping-cart"></i>
+                                                      </button> </div> <a
+                                                      href="https://veles.exdomain.net/tham-chan-love-hong-hac"
+                                                      class="quick-view" title="Xem nhanh"> <i class="fa fa-search"></i>
+                                                    </a>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="owl-item" style="width: 285px; margin-right: 10px;">
+                                    <div class="item">
+                                      <div class="ant-product-item">
+                                        <div class="product_row">
+                                          <div class="item">
+                                            <div class="item-inner">
+                                              <div class="image-container"> <a
+                                                  href="https://veles.exdomain.net/tham-chan-hoa-mau-don-sweet-house"
+                                                  class="product-item-photo"> <img
+                                                    class="product-image-photo img-responsive center-block "
+                                                    src="https://veles.exdomain.net/image/cache/catalog/products/4f2b9cd715df4d7d9c31fb9d10b0dabd-600x450-285x215.jpg"
+                                                    alt="Thảm chân hoa mẫu đơn sweet house"> </a> </div>
+                                              <div class="box-info">
+                                                <h3 class="product-item-name"> <a
+                                                    title="Thảm chân hoa mẫu đơn sweet house"
+                                                    href="https://veles.exdomain.net/tham-chan-hoa-mau-don-sweet-house"
+                                                    class="product-item-link"> Thảm chân hoa mẫu đơn sweet house </a>
+                                                </h3>
+                                                <div class="product-reviews-summary">
+                                                  <div class="rating-summary">
+                                                    <div class="bizweb-product-reviews-badge" data-id="1017908240">
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                                <div class="item-price">
+                                                  <div class="price-box price-final_price"> <span class="special-price">
+                                                      <span class="price-container"> <span class="price-wrapper"> <span
+                                                            class="price">110,000đ</span> </span> </span> </span> </div>
+                                                </div>
+                                                <div class="box-hover hidden-sm hidden-xs hidden-md">
+                                                  <div class="add-to-links">
+                                                    <div class="actions-primary"> <input type="hidden" name="id"
+                                                        value="1035080072"> <button
+                                                        onclick="window.location.href='https://veles.exdomain.net/checkout/cart/add?product_id=95&amp;redirect=true'"
+                                                        class="tt-btn-addtocart btn-buy btn-cart btn btn-gray left-to add_to_cart"
+                                                        title="Cho vào giỏ hàng"> <i class="fa fa-shopping-cart"></i>
+                                                      </button> </div> <a
+                                                      href="https://veles.exdomain.net/tham-chan-hoa-mau-don-sweet-house"
+                                                      class="quick-view" title="Xem nhanh"> <i class="fa fa-search"></i>
+                                                    </a>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="owl-item" style="width: 285px; margin-right: 10px;">
+                                    <div class="item">
+                                      <div class="ant-product-item">
+                                        <div class="product_row">
+                                          <div class="item">
+                                            <div class="item-inner">
+                                              <div class="image-container"> <a
+                                                  href="https://veles.exdomain.net/tranh-treo-tuong-xuong-rong-nghe-thuat"
+                                                  class="product-item-photo"> <img
+                                                    class="product-image-photo img-responsive center-block "
+                                                    src="https://veles.exdomain.net/image/cache/catalog/products/5eb06204c5e942baa2e08d62b570b49b-285x215.jpg"
+                                                    alt="Tranh treo tường xương rồng nghệ thuật"> </a> </div>
+                                              <div class="box-info">
+                                                <h3 class="product-item-name"> <a
+                                                    title="Tranh treo tường xương rồng nghệ thuật"
+                                                    href="https://veles.exdomain.net/tranh-treo-tuong-xuong-rong-nghe-thuat"
+                                                    class="product-item-link"> Tranh treo tường xương rồng nghệ thuật
+                                                  </a> </h3>
+                                                <div class="product-reviews-summary">
+                                                  <div class="rating-summary">
+                                                    <div class="bizweb-product-reviews-badge" data-id="1017908240">
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                                <div class="item-price">
+                                                  <div class="price-box price-final_price"> <span class="special-price">
+                                                      <span class="price-container"> <span class="price-wrapper"> <span
+                                                            class="price">396,000đ</span> </span> </span> </span> </div>
+                                                </div>
+                                                <div class="box-hover hidden-sm hidden-xs hidden-md">
+                                                  <div class="add-to-links">
+                                                    <div class="actions-primary"> <input type="hidden" name="id"
+                                                        value="1035080072"> <button
+                                                        onclick="window.location.href='https://veles.exdomain.net/checkout/cart/add?product_id=94&amp;redirect=true'"
+                                                        class="tt-btn-addtocart btn-buy btn-cart btn btn-gray left-to add_to_cart"
+                                                        title="Cho vào giỏ hàng"> <i class="fa fa-shopping-cart"></i>
+                                                      </button> </div> <a
+                                                      href="https://veles.exdomain.net/tranh-treo-tuong-xuong-rong-nghe-thuat"
+                                                      class="quick-view" title="Xem nhanh"> <i class="fa fa-search"></i>
+                                                    </a>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="owl-item cloned" style="width: 285px; margin-right: 10px;">
+                                    <div class="item">
+                                      <div class="ant-product-item">
+                                        <div class="product_row">
+                                          <div class="item">
+                                            <div class="item-inner">
+                                              <div class="image-container"> <a
+                                                  href="https://veles.exdomain.net/vo-goi-la-tra"
+                                                  class="product-item-photo"> <img
+                                                    class="product-image-photo img-responsive center-block "
+                                                    src="https://veles.exdomain.net/image/cache/catalog/products/9ac55d1ebc2d469ca1b88c1fc80947bc-285x215.jpg"
+                                                    alt="Vỏ gối lá trà"> </a> </div>
+                                              <div class="box-info">
+                                                <h3 class="product-item-name"> <a title="Vỏ gối lá trà"
+                                                    href="https://veles.exdomain.net/vo-goi-la-tra"
+                                                    class="product-item-link"> Vỏ gối lá trà </a> </h3>
+                                                <div class="product-reviews-summary">
+                                                  <div class="rating-summary">
+                                                    <div class="bizweb-product-reviews-badge" data-id="1017908240">
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                                <div class="item-price">
+                                                  <div class="price-box price-final_price"> <span class="special-price">
+                                                      <span class="price-container"> <span class="price-wrapper"> <span
+                                                            class="price">85,000đ</span> </span> </span> </span> </div>
+                                                </div>
+                                                <div class="box-hover hidden-sm hidden-xs hidden-md">
+                                                  <div class="add-to-links">
+                                                    <div class="actions-primary"> <input type="hidden" name="id"
+                                                        value="1035080072"> <button
+                                                        onclick="window.location.href='https://veles.exdomain.net/checkout/cart/add?product_id=101&amp;redirect=true'"
+                                                        class="tt-btn-addtocart btn-buy btn-cart btn btn-gray left-to add_to_cart"
+                                                        title="Cho vào giỏ hàng"> <i class="fa fa-shopping-cart"></i>
+                                                      </button> </div> <a
+                                                      href="https://veles.exdomain.net/vo-goi-la-tra" class="quick-view"
+                                                      title="Xem nhanh"> <i class="fa fa-search"></i> </a>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="owl-item cloned" style="width: 285px; margin-right: 10px;">
+                                    <div class="item">
+                                      <div class="ant-product-item">
+                                        <div class="product_row">
+                                          <div class="item">
+                                            <div class="item-inner">
+                                              <div class="image-container"> <a
+                                                  href="https://veles.exdomain.net/vo-goi-nua-trai-tim-mau-den"
+                                                  class="product-item-photo"> <img
+                                                    class="product-image-photo img-responsive center-block "
+                                                    src="https://veles.exdomain.net/image/cache/catalog/products/ab01c8d2cdc14bdba2b1053a31677b8a-285x215.jpg"
+                                                    alt="Vỏ gối nửa trái tim màu đen"> </a> </div>
+                                              <div class="box-info">
+                                                <h3 class="product-item-name"> <a title="Vỏ gối nửa trái tim màu đen"
+                                                    href="https://veles.exdomain.net/vo-goi-nua-trai-tim-mau-den"
+                                                    class="product-item-link"> Vỏ gối nửa trái tim màu đen </a> </h3>
+                                                <div class="product-reviews-summary">
+                                                  <div class="rating-summary">
+                                                    <div class="bizweb-product-reviews-badge" data-id="1017908240">
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                                <div class="item-price">
+                                                  <div class="price-box price-final_price"> <span class="special-price">
+                                                      <span class="price-container"> <span class="price-wrapper"> <span
+                                                            class="price">85,000đ</span> </span> </span> </span> </div>
+                                                </div>
+                                                <div class="box-hover hidden-sm hidden-xs hidden-md">
+                                                  <div class="add-to-links">
+                                                    <div class="actions-primary"> <input type="hidden" name="id"
+                                                        value="1035080072"> <button
+                                                        onclick="window.location.href='https://veles.exdomain.net/checkout/cart/add?product_id=100&amp;redirect=true'"
+                                                        class="tt-btn-addtocart btn-buy btn-cart btn btn-gray left-to add_to_cart"
+                                                        title="Cho vào giỏ hàng"> <i class="fa fa-shopping-cart"></i>
+                                                      </button> </div> <a
+                                                      href="https://veles.exdomain.net/vo-goi-nua-trai-tim-mau-den"
+                                                      class="quick-view" title="Xem nhanh"> <i class="fa fa-search"></i>
+                                                    </a>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="owl-item cloned" style="width: 285px; margin-right: 10px;">
+                                    <div class="item">
+                                      <div class="ant-product-item">
+                                        <div class="product_row">
+                                          <div class="item">
+                                            <div class="item-inner">
+                                              <div class="image-container"> <a
+                                                  href="https://veles.exdomain.net/vo-goi-xe-bus-london"
+                                                  class="product-item-photo"> <img
+                                                    class="product-image-photo img-responsive center-block "
+                                                    src="https://veles.exdomain.net/image/cache/catalog/products/54acd26741214178a39098044e02fa7b-285x215.jpg"
+                                                    alt="Vỏ gối xe bus London"> </a> </div>
+                                              <div class="box-info">
+                                                <h3 class="product-item-name"> <a title="Vỏ gối xe bus London"
+                                                    href="https://veles.exdomain.net/vo-goi-xe-bus-london"
+                                                    class="product-item-link"> Vỏ gối xe bus London </a> </h3>
+                                                <div class="product-reviews-summary">
+                                                  <div class="rating-summary">
+                                                    <div class="bizweb-product-reviews-badge" data-id="1017908240">
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                                <div class="item-price">
+                                                  <div class="price-box price-final_price"> <span class="special-price">
+                                                      <span class="price-container"> <span class="price-wrapper"> <span
+                                                            class="price">85,000đ</span> </span> </span> </span> </div>
+                                                </div>
+                                                <div class="box-hover hidden-sm hidden-xs hidden-md">
+                                                  <div class="add-to-links">
+                                                    <div class="actions-primary"> <input type="hidden" name="id"
+                                                        value="1035080072"> <button
+                                                        onclick="window.location.href='https://veles.exdomain.net/checkout/cart/add?product_id=99&amp;redirect=true'"
+                                                        class="tt-btn-addtocart btn-buy btn-cart btn btn-gray left-to add_to_cart"
+                                                        title="Cho vào giỏ hàng"> <i class="fa fa-shopping-cart"></i>
+                                                      </button> </div> <a
+                                                      href="https://veles.exdomain.net/vo-goi-xe-bus-london"
+                                                      class="quick-view" title="Xem nhanh"> <i class="fa fa-search"></i>
+                                                    </a>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="owl-item cloned" style="width: 285px; margin-right: 10px;">
+                                    <div class="item">
+                                      <div class="ant-product-item">
+                                        <div class="product_row">
+                                          <div class="item">
+                                            <div class="item-inner">
+                                              <div class="image-container"> <a
+                                                  href="https://veles.exdomain.net/vo-goi-xanh-trai-tim-ido"
+                                                  class="product-item-photo"> <img
+                                                    class="product-image-photo img-responsive center-block "
+                                                    src="https://veles.exdomain.net/image/cache/catalog/products/d10f51a9e94048c292fae2f0b51ff122-285x215.jpg"
+                                                    alt="Vỏ gối xanh trái tim ido"> </a> </div>
+                                              <div class="box-info">
+                                                <h3 class="product-item-name"> <a title="Vỏ gối xanh trái tim ido"
+                                                    href="https://veles.exdomain.net/vo-goi-xanh-trai-tim-ido"
+                                                    class="product-item-link"> Vỏ gối xanh trái tim ido </a> </h3>
+                                                <div class="product-reviews-summary">
+                                                  <div class="rating-summary">
+                                                    <div class="bizweb-product-reviews-badge" data-id="1017908240">
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                                <div class="item-price">
+                                                  <div class="price-box price-final_price"> <span class="special-price">
+                                                      <span class="price-container"> <span class="price-wrapper"> <span
+                                                            class="price">85,000đ</span> </span> </span> </span> </div>
+                                                </div>
+                                                <div class="box-hover hidden-sm hidden-xs hidden-md">
+                                                  <div class="add-to-links">
+                                                    <div class="actions-primary"> <input type="hidden" name="id"
+                                                        value="1035080072"> <button
+                                                        onclick="window.location.href='https://veles.exdomain.net/checkout/cart/add?product_id=98&amp;redirect=true'"
+                                                        class="tt-btn-addtocart btn-buy btn-cart btn btn-gray left-to add_to_cart"
+                                                        title="Cho vào giỏ hàng"> <i class="fa fa-shopping-cart"></i>
+                                                      </button> </div> <a
+                                                      href="https://veles.exdomain.net/vo-goi-xanh-trai-tim-ido"
+                                                      class="quick-view" title="Xem nhanh"> <i class="fa fa-search"></i>
+                                                    </a>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="owl-nav disabled">
+                                <div class="owl-prev"><i class="fa fa-angle-left" aria-hidden="true"></i></div>
+                                <div class="owl-next"><i class="fa fa-angle-right" aria-hidden="true"></i></div>
+                              </div>
+                              <div class="owl-dots disabled"></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
         </div>
+      </div>
     </div>
-</div>
-
+  </div>
+  <footer class="footer-container">
+    <div class="footer-top">
+      <div class="container">
+        <div class="footer-static">
+          <div class="row">
+            <div class="f-col f-col1 col-md-6 col-sm-12 col-xs-12">
+              <div class="footer-content">
+                <ul class="info">
+                  <li>51c, Hai Bà Trưng, P.Vĩnh Ninh, TT Huế</li>
+                  <li>Điện thoại: <a href="tel:0234 3846949">0234.3846949</a></li>
+                  <li>Website: <a href="https://vnpt.com.vn/">https://vnpt.com.vn/</a></li>
+                  <li>Email: <a href="mailto:mail.vnpt.vn">mail.vnpt.vn</a></li>
+                </ul>
+                <div class="social-icons">
+                  <ul>
+                    <li class="facebook"> <a href="#/" target="_blank"><i class="fa fa-facebook"></i></a> </li>
+                    <li class="twitter"><a href="#" target="_blank"><i class="fa fa-twitter"></i></a> </li>
+                    <li class="youtube"> <a href="#" target="_blank"><i class="fa fa-youtube"></i></a> </li>
+                    <li class="instagram"> <a href="#" target="_blank"><i class="fa fa-instagram"></i></a> </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="f-col f-col2 col-md-2 col-sm-6 col-xs-6">
+              <div class="footer-content">
+                <h4 class="footer-title">
+                  <a role="button" class="" data-toggle="collapse" aria-expanded="true"
+                    data-target="#collapseListMenu02" aria-controls="collapseListMenu02"> Thông tin </a>
+                </h4>
+                <div class="collapse in" id="collapseListMenu02">
+                  <ul class="list-menu list-menu22">
+                    <li class="li_menu">
+                      <a href="https://veles.exdomain.net/gioi-thieu"> Về chúng tôi </a>
+                    </li>
+                    <li class="li_menu"> <a href="https://veles.exdomain.net/chinh-sach-bao-mat"> Chính sách bảo mật
+                      </a> </li>
+                    <li class="li_menu"> <a href="https://veles.exdomain.net/quy-dinh-su-dung"> Quy định sử dụng </a>
+                    </li>
+                    <li class="li_menu"> <a href="https://veles.exdomain.net/thong-tin-giao-hang"> Thông tin giao hàng
+                      </a> </li>
+                    <li class="li_menu"> <a href="https://veles.exdomain.net/lien-he"> Liên hệ </a> </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="f-col f-col4 col-md-4 col-sm-12 col-xs-12">
+              <div class="footer-title">
+                <h3>Nhận bản tin</h3>
+              </div>
+              <div class="footer-content"> Đăng ký email để nhanh chóng nhận được các thông báo về khuyến mại,
+                chương trình giảm giá của chúng tôi
+                <div class="block newsletter">
+                  <div class="content">
+                    <form action="/tool/newsletter" method="post" id="mc-embedded-subscribe-form"
+                      name="mc-embedded-subscribe-form" target="_blank">
+                      <input type="email" value="" class="email" placeholder="Nhập email tại đây..." name="email"
+                        id="mail-footer" aria-label="">
+                      <button class="btn subscribe" name="subscribe" id="subscribe-footer"> <span>Đăng ký!</span>
+                      </button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
