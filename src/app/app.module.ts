@@ -17,10 +17,6 @@ import { CategoryAddComponent } from './category-add/category-add.component';
 import { CategoryEditComponent } from './category-edit/category-edit.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { DichvuComponent } from './dichvu/dichvu.component';
-import { DichvuAddComponent } from './dichvu-add/dichvu-add.component';
-import { DichvuEditComponent } from './dichvu-edit/dichvu-edit.component';
-import { ThongKeTienLuongComponent } from './thong-ke-tien-luong/thong-ke-tien-luong.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { UsersComponent } from './users/users.component';
 
@@ -32,10 +28,6 @@ import { UsersComponent } from './users/users.component';
     CategoryComponent,
     CategoryAddComponent,
     CategoryEditComponent,
-    DichvuComponent,
-    DichvuAddComponent,
-    DichvuEditComponent,
-    ThongKeTienLuongComponent,
     DashboardComponent,
     UsersComponent,
   ],
@@ -46,8 +38,7 @@ import { UsersComponent } from './users/users.component';
     HttpClientModule,
     ReactiveFormsModule,
     NgbModule,
-    FontAwesomeModule,
-    // NgbModule.forRoot(),
+    FontAwesomeModule
   ],
   providers: [API, AccountService, CategoryService],
   bootstrap: [AppComponent],

@@ -22,10 +22,10 @@ export class CategoryService {
   }
 
   delete(id:number){
-    return this.api.delete(`/api/Category/delete/${id}`);
+    return this.api.delete('/api/Category/delete/'+id);
   }
 
   getById(id:number){
-    return this.api.get(`/api/Category/get-by-id/${id}`);
+    return this.api.get('/api/Category/get-by-id/'+id);
   }
 }

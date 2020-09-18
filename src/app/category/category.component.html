@@ -1,11 +1,11 @@
 <div class="main-wrap-danh-muc-nhan-vien">
   <ol class="breadcrumb">
-    <li>Danh mục nhân viên</li>
+    <li>Category</li>
   </ol>
   <div style="margin-bottom: 10px">
     <button
       class="btn btn-primary"
-      [routerLink]="['/ThemMoiNhanVien']"
+      [routerLink]="['/create_category']"
       routerLinkActive="router-link-active"
     >
       Thêm mới
@@ -21,39 +21,42 @@
   </div>
   <table class="table table-bodered">
     <thead>
-      <th>Mã nhân viên</th>
-      <th>Tên nhân viên</th>
-      <th>Chức năng</th>
+      <th style="width:30px">#</th>
+      <th>categoryName</th>
+      <th style="width:30px"></th>
+      <th style="width:30px"></th>
     </thead>
     <tbody *ngIf="total == 0">
       <tr>
-        <td colspan="3">Không có dữ liệu</td>
+        <td colspan="4">Không có dữ liệu</td>
       </tr>
     </tbody>
     <tbody *ngIf="total > 0">
-      <tr *ngFor="let item of categories">
+      <tr *ngFor="let item of categories;index as i;trackBy : categoryName">
         <td>
-          {{ item.id }}
+          {{i+1 }}
         </td>
         <td style="color: #e91e63">
           {{ item.categoryName }}
         </td>
         <td>
-          <button
-            [routerLink]="['/ChinhSuaNhanVien/' + item.id]"
+          <a
+            [routerLink]="['/edit_category/' + item.id]"
             routerLinkActive="router-link-active"
             class="btn btn-warning"
           >
             Chỉnh sửa
-          </button>
-          <button
-            (click)="remove(item.Id)"
+          </a>
+        </td>
+        <td>
+          <a
+            (click)="remove(item.id)"
             href="javascript:;"
             class="btn btn-danger"
             style="margin-left: 5px"
           >
             Xóa
-          </button>
+          </a>
         </td>
       </tr>
     </tbody>

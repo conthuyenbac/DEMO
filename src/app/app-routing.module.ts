@@ -5,6 +5,9 @@ import { AdminComponent } from './admin/admin.component';
 import { AuthGuard } from './guards/auth.guard';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { UsersComponent} from './users/users.component';
+import { CategoryComponent } from './category/category.component';
+import { CategoryAddComponent } from './category-add/category-add.component';
+import { CategoryEditComponent } from './category-edit/category-edit.component';
 
 const routes: Routes = [
   {
@@ -30,6 +33,26 @@ const routes: Routes = [
   {
     path: 'user',
     component: UsersComponent
+  },
+  {
+    path: 'category',
+    component: CategoryComponent,
+    canActivate: [AuthGuard],
+    canActivateChild: [AuthGuard],
+  }
+  ,
+  {
+    path: 'create_category',
+    component: CategoryAddComponent,
+    canActivate: [AuthGuard],
+    canActivateChild: [AuthGuard],
+  }
+  ,
+  {
+    path: 'edit_category/:id',
+    component: CategoryEditComponent,
+    canActivate: [AuthGuard],
+    canActivateChild: [AuthGuard],
   }
 ];
 

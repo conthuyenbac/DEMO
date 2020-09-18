@@ -14,6 +14,9 @@ var admin_component_1 = require("./admin/admin.component");
 var auth_guard_1 = require("./guards/auth.guard");
 var dashboard_component_1 = require("./dashboard/dashboard.component");
 var users_component_1 = require("./users/users.component");
+var category_component_1 = require("./category/category.component");
+var category_add_component_1 = require("./category-add/category-add.component");
+var category_edit_component_1 = require("./category-edit/category-edit.component");
 var routes = [
     {
         path: '',
@@ -38,6 +41,24 @@ var routes = [
     {
         path: 'user',
         component: users_component_1.UsersComponent
+    },
+    {
+        path: 'category',
+        component: category_component_1.CategoryComponent,
+        canActivate: [auth_guard_1.AuthGuard],
+        canActivateChild: [auth_guard_1.AuthGuard]
+    },
+    {
+        path: 'create_category',
+        component: category_add_component_1.CategoryAddComponent,
+        canActivate: [auth_guard_1.AuthGuard],
+        canActivateChild: [auth_guard_1.AuthGuard]
+    },
+    {
+        path: 'edit_category/:id',
+        component: category_edit_component_1.CategoryEditComponent,
+        canActivate: [auth_guard_1.AuthGuard],
+        canActivateChild: [auth_guard_1.AuthGuard]
     }
 ];
 var AppRoutingModule = /** @class */ (function () {

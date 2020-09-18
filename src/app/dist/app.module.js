@@ -24,11 +24,8 @@ var category_add_component_1 = require("./category-add/category-add.component");
 var category_edit_component_1 = require("./category-edit/category-edit.component");
 var ng_bootstrap_1 = require("@ng-bootstrap/ng-bootstrap");
 var angular_fontawesome_1 = require("@fortawesome/angular-fontawesome");
-var dichvu_component_1 = require("./dichvu/dichvu.component");
-var dichvu_add_component_1 = require("./dichvu-add/dichvu-add.component");
-var dichvu_edit_component_1 = require("./dichvu-edit/dichvu-edit.component");
-var thong_ke_tien_luong_component_1 = require("./thong-ke-tien-luong/thong-ke-tien-luong.component");
 var dashboard_component_1 = require("./dashboard/dashboard.component");
+var users_component_1 = require("./users/users.component");
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
@@ -41,11 +38,8 @@ var AppModule = /** @class */ (function () {
                 category_component_1.CategoryComponent,
                 category_add_component_1.CategoryAddComponent,
                 category_edit_component_1.CategoryEditComponent,
-                dichvu_component_1.DichvuComponent,
-                dichvu_add_component_1.DichvuAddComponent,
-                dichvu_edit_component_1.DichvuEditComponent,
-                thong_ke_tien_luong_component_1.ThongKeTienLuongComponent,
                 dashboard_component_1.DashboardComponent,
+                users_component_1.UsersComponent,
             ],
             imports: [
                 platform_browser_1.BrowserModule,
@@ -54,7 +48,7 @@ var AppModule = /** @class */ (function () {
                 http_1.HttpClientModule,
                 forms_1.ReactiveFormsModule,
                 ng_bootstrap_1.NgbModule,
-                angular_fontawesome_1.FontAwesomeModule,
+                angular_fontawesome_1.FontAwesomeModule
             ],
             providers: [api_1.API, account_service_1.AccountService, category_service_1.CategoryService],
             bootstrap: [app_component_1.AppComponent]

@@ -37,7 +37,6 @@ export class CategoryComponent implements OnInit {
       this.categoryService.delete(id).subscribe(
         (res) => {},
         (err) => {
-          console.log(err);
           alert('Xóa không thành công');
         },
         () => {
@@ -46,7 +45,6 @@ export class CategoryComponent implements OnInit {
         }
       );
     } else {
-      // alert('Hành động bị hủy bởi người dùng');
     }
   }
 }

@@ -1,9 +1,9 @@
 <div class="container">
   <form [formGroup]="model.formGroup" (ngSubmit)="submitData()">
-    <h2>FORM thêm mới nhân viên</h2>
+    <h2>Creat Category</h2>
 
     <div class="form-group">
-      <label>Họ và tên</label>
+      <label>categoryName</label>
       <input
         type="text"
         [(ngModel)]="model.categoryName"
@@ -17,7 +17,7 @@
         "
         style="color: red !important"
       >
-        Vui lòng nhập tên nhân viên
+        Vui lòng nhập tên
       </p>
     </div>
     <button
@@ -28,7 +28,7 @@
       Lưu
     </button>
     <button
-      [routerLink]="['/DanhMucNhanVien']"
+      [routerLink]="['/category']"
       routerLinkActive="router-link-active"
       class="btn btn-secondary"
       style="margin-left: 5px"
