@@ -17,8 +17,10 @@ var users_component_1 = require("./users/users.component");
 var category_component_1 = require("./category/category.component");
 var category_add_component_1 = require("./category-add/category-add.component");
 var category_edit_component_1 = require("./category-edit/category-edit.component");
-var routes = [
-    {
+var product_component_1 = require("./product/product.component");
+var product_add_component_1 = require("./product-add/product-add.component");
+var product_edit_component_1 = require("./product-edit/product-edit.component");
+var routes = [{
         path: '',
         component: dashboard_component_1.DashboardComponent
     },
@@ -57,6 +59,24 @@ var routes = [
     {
         path: 'edit_category/:id',
         component: category_edit_component_1.CategoryEditComponent,
+        canActivate: [auth_guard_1.AuthGuard],
+        canActivateChild: [auth_guard_1.AuthGuard]
+    },
+    {
+        path: 'product',
+        component: product_component_1.ProductComponent,
+        canActivate: [auth_guard_1.AuthGuard],
+        canActivateChild: [auth_guard_1.AuthGuard]
+    },
+    {
+        path: 'product-add',
+        component: product_add_component_1.ProductAddComponent,
+        canActivate: [auth_guard_1.AuthGuard],
+        canActivateChild: [auth_guard_1.AuthGuard]
+    },
+    {
+        path: 'product-edit/:id',
+        component: product_edit_component_1.ProductEditComponent,
         canActivate: [auth_guard_1.AuthGuard],
         canActivateChild: [auth_guard_1.AuthGuard]
     }

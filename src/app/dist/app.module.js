@@ -26,6 +26,9 @@ var ng_bootstrap_1 = require("@ng-bootstrap/ng-bootstrap");
 var angular_fontawesome_1 = require("@fortawesome/angular-fontawesome");
 var dashboard_component_1 = require("./dashboard/dashboard.component");
 var users_component_1 = require("./users/users.component");
+var product_component_1 = require("./product/product.component");
+var product_add_component_1 = require("./product-add/product-add.component");
+var product_edit_component_1 = require("./product-edit/product-edit.component");
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
@@ -40,6 +43,9 @@ var AppModule = /** @class */ (function () {
                 category_edit_component_1.CategoryEditComponent,
                 dashboard_component_1.DashboardComponent,
                 users_component_1.UsersComponent,
+                product_component_1.ProductComponent,
+                product_add_component_1.ProductAddComponent,
+                product_edit_component_1.ProductEditComponent,
             ],
             imports: [
                 platform_browser_1.BrowserModule,

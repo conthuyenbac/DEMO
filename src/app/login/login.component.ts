@@ -35,8 +35,8 @@ export class LoginComponent implements OnInit {
         this.accountService.setToken(result.object.accessToken);
         this.accountService.setLogin(1);
         this.accountService.setACC(result.object.userName);
-        if (this.username!=='namnguyenthanh'){
-        this.router.navigateByUrl('/admin');
+        if (this.username!=='thanh'){
+        this.router.navigateByUrl('/dashboard');
         }
         else{
           this.router.navigateByUrl('/admin');

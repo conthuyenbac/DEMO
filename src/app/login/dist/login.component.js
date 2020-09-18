@@ -33,8 +33,8 @@ var LoginComponent = /** @class */ (function () {
             _this.accountService.setToken(result.object.accessToken);
             _this.accountService.setLogin(1);
             _this.accountService.setACC(result.object.userName);
-            if (_this.username !== 'namnguyenthanh') {
-                _this.router.navigateByUrl('/admin');
+            if (_this.username !== 'thanh') {
+                _this.router.navigateByUrl('/dashboard');
             }
             else {
                 _this.router.navigateByUrl('/admin');
