@@ -1,0 +1,63 @@
+<div class="main-wrap-danh-muc-nhan-vien">
+  <ol class="breadcrumb">
+    <li>Category</li>
+  </ol>
+  <div style="margin-bottom: 10px">
+    <button class="btn btn-primary" [routerLink]="['/product-add']" routerLinkActive="router-link-active">
+      Thêm mới
+    </button>
+    <button [routerLink]="['/admin']" routerLinkActive="router-link-active" class="btn btn-secondary"
+      style="margin-left: 5px">
+      Trở lại
+    </button>
+  </div>
+  <table class="table table-bodered">
+    <thead>
+      <th style="width:30px">#</th>
+      <th>Tên sản phẩm</th>
+      <th>Giá</th>
+      <th>Số lượng</th>
+      <th>Hình ảnh</th>
+      <th>Loại danh mục</th>
+      <th style="width:30px"></th>
+      <th style="width:30px"></th>
+    </thead>
+    <tbody *ngIf="total == 0">
+      <tr>
+        <td colspan="8">Không có dữ liệu</td>
+      </tr>
+    </tbody>
+    <tbody *ngIf="total > 0">
+      <tr *ngFor="let item of product_all;index as i;trackBy :ProductName">
+        <td>
+          {{ i + 1 }}
+        </td>
+        <td>
+          {{ item.ProductName }}
+        </td>
+        <td style="text-align:right">
+          {{ item.Price | currency:'VND'}}
+        </td>
+        <td style="text-align:right">
+          {{ item.Amount }}
+        </td>
+        <td>
+          {{ item.Supplier }}
+        </td>
+        <td>
+          {{ item.CategoryName }}
+        </td>
+        <td>
+          <a [routerLink]="['/product-edit/' + item.Id]" routerLinkActive="router-link-active" class="btn btn-warning">
+            Chỉnh sửa
+          </a>
+        </td>
+        <td>
+          <a (click)="remove(item.Id)" href="javascript:;" class="btn btn-danger" style="margin-left: 5px">
+            Xóa
+          </a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
