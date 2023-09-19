@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+<Document>
+	<name>Point Features.kml</name>
+	<Folder>
+		<name>Point Features</name>		
+		<description>Point Features</description>
+		<Placemark>
+			<name>34</name>
+			<description>1</description>
+			<styleUrl>#point1</styleUrl>
+			<Point>
+				<coordinates>107.4610459748,16.5961286189,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>35</name>
+			<description>1</description>
+			<styleUrl>#point1</styleUrl>
+			<Point>
+				<coordinates>107.4631337723,16.5952473958,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>37</name>
+			<visibility>0</visibility>
+			<description>1</description>
+			<styleUrl>#point1</styleUrl>
+			<Point>
+				<coordinates>107.4648567294,16.5946471134,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>38</name>
+			<visibility>0</visibility>
+			<description>1</description>
+			<styleUrl>#point1</styleUrl>
+			<Point>
+				<coordinates>107.4654091571,16.5944380281,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>44</name>
+			<visibility>0</visibility>
+			<description>1</description>
+			<styleUrl>#point1</styleUrl>
+			<Point>
+				<coordinates>107.4669566924,16.5910547369,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>45</name>
+			<visibility>0</visibility>
+			<description>1</description>
+			<styleUrl>#point1</styleUrl>
+			<Point>
+				<coordinates>107.4670035498,16.5910546318,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>46</name>
+			<visibility>0</visibility>
+			<description>1</description>
+			<styleUrl>#point1</styleUrl>
+			<Point>
+				<coordinates>107.4669360957,16.5902866413,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>47</name>
+			<visibility>0</visibility>
+			<description>1</description>
+			<styleUrl>#point1</styleUrl>
+			<Point>
+				<coordinates>107.4668798671,16.5902867675,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>48</name>
+			<visibility>0</visibility>
+			<description>1</description>
+			<styleUrl>#point1</styleUrl>
+			<Point>
+				<coordinates>107.4658772531,16.5903432364,0</coordinates>
+			</Point>
+		</Placemark>	
+	</Folder>
+</Document>
+</kml>
